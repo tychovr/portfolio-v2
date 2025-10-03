@@ -1,5 +1,5 @@
 import { useInView } from "motion/react";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Card, CardContent } from "./container/Card";
 import { Badge } from "./container/Badge";
@@ -18,6 +18,7 @@ type Project = {
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const projects: Project[] = [
     {
@@ -51,13 +52,16 @@ export default function Projects() {
     },
     {
       title: "Portfolio",
-      description: "awdawd",
+      description:
+        "My professional portfolio website was designed and developed to showcase my career progression, technical skills, and recent projects.\n\nIt features a modern, responsive theme for ultimate performance and accessibility with a sleek experience across all devices.\n\nThe site focuses on major work, includes interactive animations for engagement, and merges SEO best practices to guarantee maximum visibility.\n\nBy creating this project from scratch, I was able to combine front-end development, component-based design, and motion effects into a single solid, professional web presence",
       imagePath: "50five_thumbnail.png",
       technologies: ["React", "Typescript"],
       demo: "https://tychovanrosmalen.com",
-      github: "awd",
+      github: "https://github.com/tychovr/portfolio-v2",
     },
   ];
+
+  const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
 
   return (
     <section id="projects" className="py-20 px-6 sm:px-8 lg:px-12">
@@ -81,7 +85,7 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
               whileHover={{ y: -8 }}
@@ -160,12 +164,13 @@ export default function Projects() {
 
         <motion.div
           className="text-center"
+          onClick={() => setShowAllProjects(!showAllProjects)}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Button className="text-center" size="lg">
-            View All Projects
+            {showAllProjects ? "Show Less" : "View All Projects"}
           </Button>
         </motion.div>
       </div>
