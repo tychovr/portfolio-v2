@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import { ContactFormData } from "../database/email";
 import { escapeHtml } from "./escapeHtml";
 
@@ -74,6 +75,7 @@ export function emailMarkup(
                 <!-- Timestamp -->
                 <p style="margin:18px 0 0 0;color:#7c8aa5;font-size:12px;text-align:center;">
                   Received: ${new Date().toLocaleString("en-US", {
+                    timeZone: "Europe/Berlin",
                     weekday: "long",
                     year: "numeric",
                     month: "long",

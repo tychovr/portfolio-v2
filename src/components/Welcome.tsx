@@ -4,7 +4,7 @@ import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "./input/Button";
 
-export default function Hero() {
+export default function Welcome() {
   const [displayText, setDisplayText] = useState("");
   const fullText = "Tycho van Rosmalen";
 
@@ -22,8 +22,9 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-  const scrollToAbout = () => {
-    const aboutSection = document.querySelector("#about");
+  const scrollToProjects = () => {
+    const aboutSection = document.querySelector("#projects");
+
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -88,7 +89,7 @@ export default function Hero() {
               transition={{ delay: 1.4, duration: 1 }}
             >
               <Button
-                onClick={scrollToAbout}
+                onClick={scrollToProjects}
                 className="px-8 py-5 items-center"
               >
                 <span>View My Work</span>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRef } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -78,7 +78,7 @@ export default function Contact() {
       icon: Mail,
       title: "Email",
       value: "tychovanrosmalen12@gmail.com",
-      href: "mailto:tychovanrosmalen12@gmail.com?subject=Contact%20from%20Pormailtotfolio",
+      href: "mailto:tychovanrosmalen12@gmail.com?subject=Contact%20from%20Portfolio",
     },
     {
       icon: Phone,
@@ -90,7 +90,7 @@ export default function Contact() {
       icon: MapPin,
       title: "Location",
       value: "Druten, Gelderland",
-      href: "#",
+      href: "https://www.google.com/maps/place/Druten/@51.8847138,5.5580909,14z/data=!3m1!4b1!4m6!3m5!1s0x47c6ff847e22ffef:0x6768e5d3cfc549df!8m2!3d51.8940837!4d5.5942725!16zL20vMHZqX2M?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D",
     },
   ];
 
@@ -274,6 +274,8 @@ export default function Contact() {
                   <motion.a
                     key={index}
                     href={info.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
                     whileHover={{ x: 4 }}
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
