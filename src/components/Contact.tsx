@@ -43,10 +43,15 @@ export default function Contact() {
       const result = await response.json();
 
       if (!response.ok) {
+        if (response.status === 429) {
+          toast.error("Rate limit exceeded", {
+            description: "Please try again in 15 minutes.",
+            duration: 6000,
+          });
+        }
+
         throw new Error(result.error || "Failed to send message");
       }
-
-      console.info("Email sent successfully:", result);
 
       toast.success("Message sent succesfully!", {
         description: "I'll get back to you soon.",
@@ -55,16 +60,9 @@ export default function Contact() {
 
       reset();
     } catch (err) {
-      console.error("Error sending email:", err);
-
       if (errors instanceof Error) {
         toast.error("Failed to send message", {
           description: errors.message,
-          duration: 6000,
-        });
-      } else {
-        toast.error("Failed to send message", {
-          description: "Please try again or contact me directly.",
           duration: 6000,
         });
       }
