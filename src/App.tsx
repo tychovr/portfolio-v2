@@ -30,7 +30,7 @@ function App() {
     function onScroll() {
       let currentTitle = "Welcome";
       for (let i = 1; i < sectionElements.length; i++) {
-        const { el, id } = sectionElements[i];
+        const { el } = sectionElements[i];
         if (el) {
           const rect = el.getBoundingClientRect();
           if (rect.top <= 80) {
