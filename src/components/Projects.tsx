@@ -1,26 +1,16 @@
-import { useInView } from "motion/react";
+import { AnimatePresence, useInView } from "motion/react";
 import React, { useRef, useState } from "react";
 import { motion } from "motion/react";
-import { Card, CardContent } from "./container/Card";
-import { Badge } from "./container/Badge";
 import { Button } from "./input/Button";
-import { Github } from "lucide-react";
-
-type Project = {
-  title: string;
-  description: string;
-  imagePath: string;
-  technologies: string[];
-  github?: string;
-  demo?: string;
-};
+import { ProjectType } from "../types";
+import Project from "./container/Project";
 
 export default function Projects() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [showAllProjects, setShowAllProjects] = useState(false);
 
-  const projects: Project[] = [
+  const projects: ProjectType[] = [
     {
       title: "50five Mobile App",
       description:
@@ -61,7 +51,25 @@ export default function Projects() {
     },
   ];
 
-  const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
+  const firstProjects = projects.slice(0, 3);
+  const hiddenProjects = projects.slice(3);
+
+  const scrollToProjects = () => {
+    const element = document.querySelector("#projects");
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleToggleProjects = () => {
+    if (showAllProjects) {
+      scrollToProjects();
+      setShowAllProjects(false);
+    } else {
+      setShowAllProjects(true);
+    }
+  };
 
   return (
     <section id="projects" className="py-20 px-6 sm:px-8 lg:px-12">
@@ -79,92 +87,26 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {displayedProjects.map((project, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            >
-              <Card className="h-full border-border hover:border-primary/50 transition-colors overflow-hidden">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={`images/${project.imagePath}`}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-                </div>
-
-                <CardContent className="p-6">
-                  <h3 className="text-xl mb-3">{project.title}</h3>
-
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {project.description.split("\n").map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        {i < project.description.split("\n").length - 1 && (
-                          <br />
-                        )}
-                      </React.Fragment>
-                    ))}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge
-                        key={techIndex}
-                        variant="outline"
-                        className="text-xs"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-3">
-                    {project.github && (
-                      <Button variant="outline" size="sm" className="flex-1">
-                        {/* Only a single child is allowed for asChild */}
-                        <a
-                          href={project.github}
-                          className="flex items-center justify-center gap-2"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-4 w-4" />
-                          <span>GitHub</span>
-                        </a>
-                      </Button>
-                    )}
-                    {project.demo && (
-                      <Button variant="outline" size="sm" className="flex-1">
-                        {/* Only a single child is allowed for asChild */}
-                        <a
-                          href={project.demo}
-                          className="flex items-center justify-center gap-2"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <span>Demo</span>
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+        <AnimatePresence>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {firstProjects.map((project, index) => (
+              <Project project={project} index={index} />
+            ))}
+            {showAllProjects &&
+              hiddenProjects.map((project, index) => (
+                <Project project={project} index={index} />
+              ))}
+          </motion.div>
+        </AnimatePresence>
 
         <motion.div
           className="text-center"
-          onClick={() => setShowAllProjects(!showAllProjects)}
+          onClick={handleToggleProjects}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.4 }}
