@@ -54,7 +54,7 @@ export default function Projects() {
       title: "Portfolio",
       description:
         "My professional portfolio website was designed and developed to showcase my career progression, technical skills, and recent projects.\n\nIt features a modern, responsive theme for ultimate performance and accessibility with a sleek experience across all devices.\n\nThe site focuses on major work, includes interactive animations for engagement, and merges SEO best practices to guarantee maximum visibility.\n\nBy creating this project from scratch, I was able to combine front-end development, component-based design, and motion effects into a single solid, professional web presence",
-      imagePath: "50five_thumbnail.png",
+      imagePath: "portfolio_thumbnail.png",
       technologies: ["React", "Typescript"],
       demo: "https://tychovanrosmalen.com",
       github: "https://github.com/tychovr/portfolio-v2",
