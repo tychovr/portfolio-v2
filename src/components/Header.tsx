@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./input/Button";
 import { Menu, X } from "lucide-react";
@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const navItems = [
     { label: "About", href: "#about" },
@@ -24,15 +25,36 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  // Fix: Wait for menu to close before scrolling, to avoid menu covering target section
+  const scrollToSection = (href: string, closeMenu: boolean = false) => {
+    if (closeMenu) {
+      setIsMenuOpen(false);
+      // Wait for menu close animation to finish before scrolling
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // match AnimatePresence transition duration
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
-
-    setIsMenuOpen(false);
   };
+
+  // Optional: Close menu when clicking outside (for better UX)
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [isMenuOpen]);
 
   return (
     <motion.header
@@ -91,6 +113,7 @@ export default function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? (
                 <X className="h-5 w-5" />
@@ -104,6 +127,7 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              ref={menuRef}
               className="md:hidden bg-background border-t border-border"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
@@ -114,7 +138,7 @@ export default function Header() {
                 {navItems.map((item, index) => (
                   <motion.button
                     key={item.label}
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => scrollToSection(item.href, true)}
                     className="block w-full px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors rounded-lg text-left"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -131,7 +155,7 @@ export default function Header() {
                   className="pt-2 px-4"
                 >
                   <Button
-                    onClick={() => scrollToSection("#contact")}
+                    onClick={() => scrollToSection("#contact", true)}
                     className="w-full"
                   >
                     Get In Touch
