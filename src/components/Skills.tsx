@@ -1,3 +1,4 @@
+import React from "react";
 import { Cloud, Database, Monitor, Server, Smartphone } from "lucide-react";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";

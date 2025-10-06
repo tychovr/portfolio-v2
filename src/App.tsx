@@ -1,9 +1,12 @@
+import React from "react";
 import "./styles/globals.css";
 import Header from "./components/Header";
 import About from "./components/About";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Toast from "./components/container/Toast";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -14,7 +17,9 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </main>
+      <Toast />
     </div>
   );
 }

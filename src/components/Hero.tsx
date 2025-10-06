@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { motion } from "motion/react";

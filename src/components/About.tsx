@@ -1,3 +1,4 @@
+import React from "react";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Code2, Lightbulb, Users, Zap } from "lucide-react";
