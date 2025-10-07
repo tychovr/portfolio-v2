@@ -74,7 +74,7 @@
   --destructive: 220 38 38;
   --destructive-foreground: 255 255 255;
   --border: 100 116 139 / 0.2;
-  --input: 241 245 249 / 0.8;
+  --input: 241 245 249;
   --input-background: 248 250 252;
   --switch-background: 226 232 240;
   --ring: 5 150 105;
@@ -89,7 +89,7 @@
   --sidebar-primary-foreground: 255 255 255;
   --sidebar-accent: 241 245 249;
   --sidebar-accent-foreground: 51 65 85;
-  --sidebar-border: 100 116 139 / 0.2;
+  --sidebar-border: 100 116 139;
   --sidebar-ring: 5 150 105;
 }
 
