@@ -4,7 +4,7 @@ import { Card, CardContent } from "./Card";
 import { Badge } from "./Badge";
 import { ProjectType } from "../../types";
 import { motion } from "motion/react";
-import { Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 interface ProjectProps {
   project: ProjectType;
@@ -51,7 +51,11 @@ const Project = ({ project, index }: ProjectProps) => {
 
             <div className="flex flex-wrap gap-2 mb-6">
               {project.technologies.map((tech, techIndex) => (
-                <Badge key={techIndex} variant="outline" className="text-xs">
+                <Badge
+                  key={techIndex}
+                  variant="outline"
+                  className="hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
                   {tech}
                 </Badge>
               ))}
@@ -71,13 +75,12 @@ const Project = ({ project, index }: ProjectProps) => {
                 >
                   <span className="flex items-center justify-center gap-2">
                     <Github className="h-4 w-4" />
-                    <span>GitHub</span>
+                    <span>Code</span>
                   </span>
                 </Button>
               )}
               {project.demo && (
                 <Button
-                  variant="outline"
                   size="sm"
                   className="flex-1"
                   onClick={() =>
@@ -85,6 +88,7 @@ const Project = ({ project, index }: ProjectProps) => {
                   }
                 >
                   <span className="flex items-center justify-center gap-2">
+                    <ExternalLink className="h-4 w-4" />
                     <span>Demo</span>
                   </span>
                 </Button>
