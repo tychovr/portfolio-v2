@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/globals.css";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -9,15 +9,19 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/input/ScrollToTop";
 import Welcome from "./components/Welcome";
+import { useTranslation } from "react-i18next";
+import i18n from "./translations/i18n";
 
 function App() {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const sectionTitles = [
-      { id: "welcome", title: "Welcome" },
-      { id: "about", title: "About" },
-      { id: "skills", title: "Skills" },
-      { id: "projects", title: "Projects" },
-      { id: "contact", title: "Contact" },
+      { id: "welcome", title: t("navigation.welcome") },
+      { id: "about", title: t("navigation.about") },
+      { id: "skills", title: t("navigation.skills") },
+      { id: "projects", title: t("navigation.projects") },
+      { id: "contact", title: t("navigation.contact") },
     ];
 
     const sectionElements = sectionTitles.map(({ id }) => {
@@ -47,10 +51,10 @@ function App() {
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [i18n.language]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" key={i18n.language}>
       <Header />
       <main>
         <Welcome />

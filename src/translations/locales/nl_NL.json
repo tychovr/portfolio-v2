@@ -109,7 +109,8 @@
     "about": "Over",
     "contact": "Contact",
     "projects": "Projecten",
-    "skills": "Vaardigheden"
+    "skills": "Vaardigheden",
+    "welcome": "Welkom"
   },
   "projects": {
     "description": "Een overzicht van recent werk dat technische expertise in verschillende domeinen laat zien",

@@ -109,7 +109,8 @@
     "about": "About",
     "contact": "Contact",
     "projects": "Projects",
-    "skills": "Skills"
+    "skills": "Skills",
+    "welcome": "Welcome"
   },
   "projects": {
     "description": "A showcase of recent work demonstrating technical expertise across various domains",

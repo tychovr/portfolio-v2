@@ -4,11 +4,15 @@ import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./input/Button";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "./input/LanguageSwitcher";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
+
   const { t } = useTranslation();
 
   const navItems = [
@@ -27,17 +31,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Fix: Wait for menu to close before scrolling, to avoid menu covering target section
   const scrollToSection = (href: string, closeMenu: boolean = false) => {
     if (closeMenu) {
       setIsMenuOpen(false);
-      // Wait for menu close animation to finish before scrolling
+
       setTimeout(() => {
         const element = document.querySelector(href);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 300); // match AnimatePresence transition duration
+      }, 300);
     } else {
       const element = document.querySelector(href);
       if (element) {
@@ -46,14 +49,18 @@ export default function Header() {
     }
   };
 
-  // Optional: Close menu when clicking outside (for better UX)
   useEffect(() => {
     if (!isMenuOpen) return;
     const handleClick = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setIsMenuOpen(false);
+      if (
+        (menuRef.current && menuRef.current.contains(e.target as Node)) ||
+        (buttonRef.current && buttonRef.current.contains(e.target as Node))
+      ) {
+        return;
       }
+      setIsMenuOpen(false);
     };
+
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, [isMenuOpen]);
@@ -77,7 +84,7 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-xl text-primary">Tycho van Rosmalen</span>
+            <span className="text-xl text-primary">TR</span>
           </motion.div>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -95,13 +102,15 @@ export default function Header() {
             ))}
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              className="flex gap-10 direction-row"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <Button onClick={() => scrollToSection("#contact")} size="sm">
                 {t("button.get_in_touch")}
               </Button>
+              <LanguageSwitcher />
             </motion.div>
           </nav>
 
@@ -109,9 +118,11 @@ export default function Header() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="md:hidden"
+            className="md:hidden flex flex-row items-center justify-center gap-2"
           >
+            {!isMenuOpen && <LanguageSwitcher />}
             <Button
+              ref={buttonRef}
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -154,7 +165,7 @@ export default function Header() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
-                  className="pt-2 px-4"
+                  className="pt-2 px-4 "
                 >
                   <Button
                     onClick={() => scrollToSection("#contact", true)}
