@@ -9,8 +9,8 @@ import { Label } from "./container/Label";
 import { Input } from "./input/TextField";
 import { TextArea } from "./input/TextArea";
 import { Button } from "./input/Button";
-import { ContactFormData } from "../database/email";
 import { useTranslation } from "react-i18next";
+import { ContactFormData } from "../types/types";
 
 export default function Contact() {
   const ref = useRef(null);

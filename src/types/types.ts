@@ -6,3 +6,10 @@ export type ProjectType = {
   github?: string;
   demo?: string;
 };
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
