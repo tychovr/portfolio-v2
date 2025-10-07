@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "./input/Button";
-
+import { useTranslation } from "react-i18next";
 export default function Welcome() {
+  const { t } = useTranslation();
   const [displayText, setDisplayText] = useState("");
   const fullText = "Tycho van Rosmalen";
 
@@ -45,7 +46,9 @@ export default function Welcome() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <span className="text-primary text-lg">Hello, I'm</span>
+              <span className="text-primary text-lg">
+                Hello, I'm {t("test")}
+              </span>
             </motion.div>
 
             <motion.h1
