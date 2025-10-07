@@ -80,7 +80,22 @@
         "placeholder": "Projectbespreking",
         "required": "Een onderwerp is verplicht"
       },
-      "title": "Stuur een bericht"
+      "title": "Stuur een bericht",
+      "toast": {
+        "failed": {
+          "description": "Bericht verzenden mislukt",
+          "extension": "Probeer het alstublieft opnieuw",
+          "title": "Bericht verzenden mislukt"
+        },
+        "rate_limit": {
+          "description": "Probeer het opnieuw over {{duration}} minuten.",
+          "title": "limiet overschreden"
+        },
+        "message_sent": {
+          "description": "Ik neem snel contact met je op.",
+          "title": "Bericht succesvol verzonden!"
+        }
+      }
     },
     "title": "Neem contact op"
   },

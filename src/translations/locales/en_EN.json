@@ -80,7 +80,22 @@
         "placeholder": "Project discussion",
         "required": "A subject is required"
       },
-      "title": "Send a Message"
+      "title": "Send a Message",
+      "toast": {
+        "failed": {
+          "description": "Failed to send message",
+          "extension": "Please try again",
+          "title": "Failed to send message"
+        },
+        "rate_limit": {
+          "description": "Please try again in {{duration}} minutes.",
+          "title": "rate limit exceeded"
+        },
+        "message_sent": {
+          "description": "I'll get back to you soon.",
+          "title": "Message sent succesfully!"
+        }
+      }
     },
     "title": "Get In Touch"
   },

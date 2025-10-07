@@ -46,31 +46,37 @@ export default function Contact() {
 
       if (!response.ok) {
         if (response.status === 429) {
-          toast.error("Rate limit exceeded", {
-            description: "Please try again in 15 minutes.",
+          toast.error(t("contact.form.toast.rate_limit.title"), {
+            description: t("contact.form.toast.rate_limit.description", {
+              duration: 15,
+            }),
             duration: 6000,
           });
         }
 
-        throw new Error(result.error || "Failed to send message");
+        throw new Error(
+          result.error || t("contact.form.toast.failed.description")
+        );
       }
 
-      toast.success("Message sent succesfully!", {
-        description: "I'll get back to you soon.",
+      toast.success(t("contact.form.toast.message_sent.title"), {
+        description: t("contact.form.toast.message_sent.description"),
         duration: 5000,
       });
 
       reset();
     } catch (err) {
       if (errors instanceof Error) {
-        toast.error("Failed to send message", {
+        toast.error(t("contact.form.toast.failed.title"), {
           description: errors.message,
           duration: 6000,
         });
       }
 
       setError("root", {
-        message: "Failed to send message. Please try again.",
+        message: `${t("contact.form.toast.failed.description")}${t(
+          "contact.form.toast.failed.extension"
+        )}`,
       });
     }
   };
