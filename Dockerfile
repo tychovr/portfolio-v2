@@ -22,6 +22,6 @@ COPY --from=builder /app/public ./public
 RUN addgroup -g 1001 -S nodejs && adduser -S crauser -u 1001 -G nodejs
 USER crauser
 
-EXPOSE 3000
+EXPOSE 4000
 
-CMD ["serve", "-s", "build", "-l", "3000"]
+CMD ["serve", "-s", "build", "-l", "4000"]
