@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
 import { DateTime } from "luxon";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { Button } from "./input/Button";
 import { useTranslation } from "react-i18next";
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./styles/globals.css";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -51,7 +51,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, [i18n.language]);
+  }, [t]);
 
   return (
     <div className="min-h-screen bg-background" key={i18n.language}>

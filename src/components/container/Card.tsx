@@ -27,13 +27,25 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
+type CardTitleProps = React.ComponentProps<"div"> & {
+  as?: React.ElementType;
+  children?: React.ReactNode;
+};
+
+function CardTitle({
+  className,
+  as: Component = "h4",
+  children,
+  ...props
+}: CardTitleProps) {
   return (
-    <h4
+    <Component
       data-slot="card-title"
       className={cn("leading-none", className)}
       {...props}
-    />
+    >
+      {children ?? <span className="sr-only">Card title</span>}
+    </Component>
   );
 }
 

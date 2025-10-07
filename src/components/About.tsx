@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Code2, Lightbulb, Users, Zap } from "lucide-react";
 import { Card, CardContent } from "./container/Card";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 export default function About() {
