@@ -34,8 +34,8 @@
   --destructive: 239 68 68;
   --destructive-foreground: 0 255 255;
   --border: 148 163 184 / 0.1;
-  --input: 30 41 59 / 0.5;
-  --input-background: 30 41 59 / 0.8;
+  --input: 30 41 59;
+  --input-background: 30 41 59;
   --switch-background: 55 65 81;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
