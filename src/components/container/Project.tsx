@@ -12,6 +12,7 @@ interface ProjectProps {
 }
 
 const Project = ({ project, index }: ProjectProps) => {
+  console.log(project);
   return (
     <motion.div
       key={project.title}
@@ -60,28 +61,32 @@ const Project = ({ project, index }: ProjectProps) => {
 
             <div className="flex gap-3">
               {project.github && (
-                <Button variant="outline" size="sm" className="flex-1">
-                  <a
-                    href={project.github}
-                    className="flex items-center justify-center gap-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1"
+                  onClick={() =>
+                    window.open(project.github, "_blank", "noopener,noreferrer")
+                  }
+                >
+                  <span className="flex items-center justify-center gap-2">
                     <Github className="h-4 w-4" />
                     <span>GitHub</span>
-                  </a>
+                  </span>
                 </Button>
               )}
               {project.demo && (
-                <Button variant="outline" size="sm" className="flex-1">
-                  <a
-                    href={project.demo}
-                    className="flex items-center justify-center gap-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1"
+                  onClick={() =>
+                    window.open(project.demo, "_blank", "noopener,noreferrer")
+                  }
+                >
+                  <span className="flex items-center justify-center gap-2">
                     <span>Demo</span>
-                  </a>
+                  </span>
                 </Button>
               )}
             </div>
