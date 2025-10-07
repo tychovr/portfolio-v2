@@ -1,12 +1,13 @@
-version: "3.8"
 services:
-  nextjs:
-    build: ./
-    volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/.next
+  web:
+    build: .
+    container_name: portfolio_web
     ports:
-      - "3000:3000"
-    environment:
-      NODE_ENV: production
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - portfolio_net
+
+networks:
+  portfolio_net:
+    external: true
