@@ -3,43 +3,42 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Code2, Lightbulb, Users, Zap } from "lucide-react";
 import { Card, CardContent } from "./container/Card";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
   const ref = useRef(null);
+  const { t } = useTranslation();
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const highlights = [
     {
       icon: Code2,
-      title: "Clean Code",
-      description:
-        "Writing maintainable, scalable code with modern best practices and design patterns.",
+      title: t("about.highlights.clean_code.title"),
+      description: t("about.highlights.clean_code.description"),
     },
     {
       icon: Lightbulb,
-      title: "Problem Solving",
-      description:
-        "Turning complex challenges into elegant solutions through creative thinking.",
+      title: t("about.highlights.problem_solving.title"),
+      description: t("about.highlights.problem_solving.description"),
     },
     {
       icon: Users,
-      title: "Collaboration",
-      description:
-        "Working effectively with teams to deliver exceptional user experiences.",
+      title: t("about.highlights.collaboration.title"),
+      description: t("about.highlights.collaboration.description"),
     },
     {
       icon: Zap,
-      title: "Performance",
-      description:
-        "Optimizing applications for speed, efficiency, and seamless interactions.",
+      title: t("about.highlights.performance.title"),
+      description: t("about.highlights.performance.description"),
     },
   ];
 
   const stats = [
-    { label: "Years Experience", value: "2+" },
-    { label: "Projects Completed", value: "10+" },
-    { label: "Technologies", value: "20+" },
-    { label: "Client Satisfaction", value: "100%" },
+    { label: t("stats.experience"), value: "2+" },
+    { label: t("stats.projects"), value: "10+" },
+    { label: t("stats.technologies"), value: "20+" },
+    { label: t("stats.satisfaction"), value: "100%" },
   ];
 
   return (
@@ -51,10 +50,9 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl mb-4">About Me</h2>
+          <h2 className="text-4xl sm:text-5xl mb-4">{t("about.title")}</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate software engineer with 2+ years of experience
-            building innovative digital solutions.
+            {t("about.description")}
           </p>
         </motion.div>
 
@@ -66,30 +64,12 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div>
-              <h3 className="text-2xl mb-6">My Journey</h3>
+              <h3 className="text-2xl mb-6">{t("about.journey.title")}</h3>
 
               <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>
-                  Curiosity sparked my early love of technology, which has
-                  undoubtedly developed over time. I now like addressing
-                  challenging challenges and optimizing them as a software
-                  engineer. It's more than simply code on a screen to me; it's
-                  transforming concepts into something that was previously only
-                  possible in dreams. I don't build for show; I build with a
-                  purpose, creating solutions that support human development.
-                </p>
-
-                <p>
-                  I believe in continuous learning and staying up-to-date with
-                  emerging technologies. When I'm not coding, you'll find me
-                  exploring new frameworks and tools.
-                </p>
-
-                <p>
-                  Right now I focus on full-stack design, using modern tech to
-                  make ideas shine. Building apps that do more than just run,
-                  they’re smooth to use — and made to be fun.
-                </p>
+                <p>{t("about.journey.description1")}</p>
+                <p>{t("about.journey.description2")}</p>
+                <p>{t("about.journey.description3")}</p>
               </div>
             </div>
 

@@ -1,1 +1,143 @@
-{"test": "Test123"}
+{
+  "about": {
+    "description": "Ik ben een gepassioneerde software engineer met meer dan 2 jaar ervaring in het bouwen van innovatieve digitale oplossingen.",
+    "highlights": {
+      "clean_code": {
+        "description": "Het schrijven van onderhoudbare, schaalbare code met moderne best practices en ontwerpprincipes.",
+        "title": "Schone Code"
+      },
+      "collaboration": {
+        "description": "Effectief samenwerken met teams om uitzonderlijke gebruikerservaringen te leveren.",
+        "title": "Samenwerking"
+      },
+      "performance": {
+        "description": "Applicaties optimaliseren voor snelheid, efficiëntie en soepele interacties.",
+        "title": "Prestaties"
+      },
+      "problem_solving": {
+        "description": "Complexe uitdagingen omzetten in elegante oplossingen door creatief denken.",
+        "title": "Probleemoplossing"
+      }
+    },
+    "journey": {
+      "description1": "Nieuwsgierigheid wekte al vroeg mijn liefde voor technologie, die zich ongetwijfeld in de loop der tijd heeft ontwikkeld. Nu vind ik het leuk om uitdagende problemen aan te pakken en te optimaliseren als software engineer. Voor mij is het meer dan alleen code op een scherm; het is het omzetten van ideeën in iets wat voorheen alleen in dromen mogelijk was. Ik bouw niet voor de show; ik bouw met een doel, en creëer oplossingen die menselijke ontwikkeling ondersteunen.",
+      "description2": "Ik geloof in continu leren en up-to-date blijven met opkomende technologieën. Als ik niet aan het coderen ben, ontdek ik graag nieuwe frameworks en tools.",
+      "description3": "Op dit moment richt ik me op full-stack design, waarbij ik moderne technologie gebruik om ideeën te laten schitteren. Ik bouw apps die meer doen dan alleen werken; ze zijn soepel in gebruik — en gemaakt om leuk te zijn.",
+      "title": "Mijn Reis"
+    },
+
+    "title": "Over Mij"
+  },
+  "availability": {
+    "current": "Huidige Beschikbaarheid",
+    "contracted": "Open voor gecontracteerde zijprojecten",
+    "fulltime": "Open voor fulltime kansen",
+    "response_time": "Reactietijd: Meestal binnen 24 uur"
+  },
+  "button": {
+    "back_to_top": "Terug naar boven",
+    "code": "Code",
+    "demo": "Demo",
+    "download_cv": "CV Downloaden",
+    "get_in_touch": "Neem contact op",
+    "send_message": "Bericht versturen",
+    "sending": "Bezig met verzenden...",
+    "show_less": "Minder weergeven",
+    "view_all_projects": "Bekijk alle projecten",
+    "view_my_work": "Bekijk mijn werk"
+  },
+  "contact": {
+    "connect": {
+      "description": "Ik sta altijd open voor het bespreken van nieuwe projecten, creatieve ideeën of kansen. Of je nu een technische partner zoekt of wilt praten over technologie, ik hoor graag van je.",
+      "email": "E-mail",
+      "location": "Locatie",
+      "phone": "Telefoon",
+      "title": "Laten we verbinden"
+    },
+    "description": "Klaar om aan je volgende project te beginnen? Laten we bespreken hoe we kunnen samenwerken.",
+    "form": {
+      "email": {
+        "invalid": "Ongeldig e-mailadres",
+        "label": "E-mail",
+        "placeholder": "john.doe@example.com",
+        "required": "Een e-mailadres is verplicht"
+      },
+      "name": {
+        "label": "Naam",
+        "min_length": "Naam moet minimaal {{length}} tekens bevatten",
+        "placeholder": "Jouw naam",
+        "required": "Je naam is verplicht"
+      },
+      "message": {
+        "label": "Bericht",
+        "min_length": "Bericht moet minimaal {{length}} tekens bevatten",
+        "placeholder": "Vertel me over je project...",
+        "required": "Een bericht is verplicht"
+      },
+      "subject": {
+        "label": "Onderwerp",
+        "min_length": "Onderwerp moet minimaal {{length}} tekens bevatten",
+        "placeholder": "Projectbespreking",
+        "required": "Een onderwerp is verplicht"
+      },
+      "title": "Stuur een bericht"
+    },
+    "title": "Neem contact op"
+  },
+  "footer": {
+    "contact": "Contact",
+    "copy_right": "Alle rechten voorbehouden.",
+    "description": "Software Engineer met passie voor het creëren van uitzonderlijke digitale ervaringen door schone code en doordacht ontwerp",
+    "links": "Snelle links"
+  },
+  "navigation": {
+    "about": "Over",
+    "contact": "Contact",
+    "projects": "Projecten",
+    "skills": "Vaardigheden"
+  },
+  "projects": {
+    "description": "Een overzicht van recent werk dat technische expertise in verschillende domeinen laat zien",
+    "projects": {
+      "50five_app": {
+        "description": "Mobiele app voor het beheren, vinden en filteren van 420.000+ EV-laadpunten in heel Europa. Inclusief laadpuntbeheer, realtime statusupdates en bediening op afstand voor operators. Gericht op intuïtieve UX, snelle zoekfunctie en schaalbare infrastructuur.",
+        "title": "50five Mobiele App"
+      },
+      "operations_dashboard": {
+        "description": "Geautomatiseerd systeem voor realtime monitoring en automatisch resetten van EV-laadstations bij fouten. Inclusief gebeurtenislogboek, filtering en directe feedback voor operators.",
+        "title": "Operations Dashboard"
+      },
+      "build_at_home": {
+        "description": "Webapplicatie die scholen wereldwijd verbindt om projecten te delen en samen te werken. Gebouwd in een internationaal team, gericht op wereldwijde kennisuitwisseling.",
+        "title": "Build at Home"
+      },
+      "portfolio": {
+        "description": "Persoonlijke portfolio website die projecten en vaardigheden toont. Vanaf nul gebouwd met modern, responsief ontwerp en interactieve animaties.",
+        "title": "Portfolio"
+      }
+    },
+    "title": "Uitgelichte Projecten"
+  },
+  "skills": {
+    "categories": {
+      "backend": "Backend",
+      "cloud_devops": "Cloud & DevOps",
+      "databases": "Databases",
+      "frontend": "Frontend",
+      "mobile": "Mobiel"
+    },
+    "description": "Een uitgebreide toolkit van moderne technologieën om uitzonderlijke digitale ervaringen te bouwen.",
+    "title": "Vaardigheden & Technologieën"
+  },
+  "stats": {
+    "experience": "Jaren Ervaring",
+    "projects": "Projecten Voltooid",
+    "satisfaction": "Klanttevredenheid",
+    "technologies": "Technologieën"
+  },
+  "welcome": {
+    "description": "Ik bouw uitzonderlijke digitale ervaringen door schone code en doordacht ontwerp. Gepassioneerd over het creëren van schaalbare applicaties die echte problemen oplossen.",
+    "hi": "Hoi, ik ben",
+    "software_engineer": "Software Engineer"
+  }
+}

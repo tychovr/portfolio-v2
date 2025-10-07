@@ -3,14 +3,8 @@ import nl_NL from "./locales/nl_NL.json";
 import en_EN from "./locales/en_EN.json";
 import i18n from "i18next";
 
-// i18n.configure({
-//   locales: ["nl", "en"],
-//   directory: path.join(__dirname, "./locales"),
-//   defaultLocale: "en",
-// });
-
 i18n.use(initReactI18next).init({
-  lng: "en", // or "nl"
+  lng: "en",
   fallbackLng: "en",
   debug: false,
   resources: {

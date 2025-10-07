@@ -4,16 +4,18 @@ import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "./input/Button";
 import { useTranslation } from "react-i18next";
+import i18n from "../translations/i18n";
 export default function Welcome() {
-  const { t } = useTranslation();
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Tycho van Rosmalen";
+  const { t } = useTranslation();
+
+  const fullName = "Tycho van Rosmalen";
 
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
-      if (i < fullText.length) {
-        setDisplayText(fullText.slice(0, i + 1));
+      if (i < fullName.length) {
+        setDisplayText(fullName.slice(0, i + 1));
         i++;
       } else {
         clearInterval(timer);
@@ -46,9 +48,7 @@ export default function Welcome() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <span className="text-primary text-lg">
-                Hello, I'm {t("test")}
-              </span>
+              <span className="text-primary text-lg">{t("welcome.hi")}</span>
             </motion.div>
 
             <motion.h1
@@ -71,7 +71,7 @@ export default function Welcome() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 1 }}
             >
-              Software Engineer
+              {t("welcome.software_engineer")}
             </motion.h2>
 
             <motion.p
@@ -80,9 +80,7 @@ export default function Welcome() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 1 }}
             >
-              I build exceptional digital experiences through clean code and
-              thoughtful design. Passionate about creating scalable applications
-              that solve real-world problems.
+              {t("welcome.description")}
             </motion.p>
 
             <motion.div
@@ -95,12 +93,12 @@ export default function Welcome() {
                 onClick={scrollToProjects}
                 className="px-8 py-5 items-center"
               >
-                <span>View My Work</span>
+                <span>{t("button.view_my_work")}</span>
                 <ArrowDown className="h-5 w-5 mx-auto" />
               </Button>
 
               <a
-                href="/documents/CV - Tycho van Rosmalen.pdf"
+                href={`/documents/CV - Tycho van Rosmalen (${i18n.language}).pdf`}
                 download
                 target="_blank"
                 rel="noopener noreferrer"
@@ -112,7 +110,7 @@ export default function Welcome() {
                 >
                   <span className="flex items-center">
                     <Download className="mr-2 h-4 w-4" />
-                    Download CV
+                    {t("button.download_cv")}
                   </span>
                 </Button>
               </a>

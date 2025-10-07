@@ -3,8 +3,11 @@ import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
 import { DateTime } from "luxon";
 import { motion, useInView } from "motion/react";
 import { Button } from "./input/Button";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   const currentYear = DateTime.now().year;
 
   const socialLinks = [
@@ -24,10 +27,10 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: t("navigation.about"), href: "#about" },
+    { label: t("navigation.skills"), href: "#skills" },
+    { label: t("navigation.projects"), href: "#projects" },
+    { label: t("navigation.contact"), href: "#contact" },
   ];
 
   const scrollToTop = () => {
@@ -55,8 +58,7 @@ export default function Footer() {
           <div className="md:col-span-2 space-y-4">
             <h3 className="text-xl">Tycho van Rosmalen</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Software Engineer passionate about creating exceptional digital
-              experiences through clean code and thoughtful design.
+              {t("footer.description")}
             </p>
 
             <div className="flex space-x-4">
@@ -80,9 +82,9 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h4>Quick Links</h4>
+            <h4>{t("footer.links")}</h4>
             <nav className="flex flex-col space-y-2">
-              {quickLinks.map((link, index) => (
+              {quickLinks.map((link) => (
                 <button
                   key={link.label}
                   onClick={() => scrollToSection(link.href)}
@@ -95,13 +97,13 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h4>Contact</h4>
+            <h4>{t("footer.contact")}</h4>
             <div className="space-y-2 text-muted-foreground">
               <p>tychovanrosmalen12@gmail.com</p>
               <p>Druten, Gelderland</p>
               <div className="flex flex-col text-primary text-sm gap-1">
-                <span>Available for contracted side projects</span>
-                <span>Available for full-time opportunities</span>
+                <span>{t("availability.contracted")}</span>
+                <span>{t("availability.fulltime")}</span>
               </div>
             </div>
           </div>
@@ -115,7 +117,7 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Tycho van Rosmalen. All rights reserved.
+            © {currentYear} Tycho van Rosmalen. {t("footer.copy_right")}
           </p>
 
           <Button
@@ -125,7 +127,7 @@ export default function Footer() {
             className="flex items-center gap-2 h-10"
           >
             <ArrowUp className="h-5 w-4 mx-auto" />
-            <span className="text-sm">Back to top</span>
+            <span className="text-sm">{t("button.back_to_top")}</span>
           </Button>
         </motion.div>
       </div>

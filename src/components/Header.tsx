@@ -3,17 +3,19 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./input/Button";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
 
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: t("navigation.about"), href: "#about" },
+    { label: t("navigation.skills"), href: "#skills" },
+    { label: t("navigation.projects"), href: "#projects" },
+    { label: t("navigation.contact"), href: "#contact" },
   ];
 
   useEffect(() => {
@@ -98,7 +100,7 @@ export default function Header() {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <Button onClick={() => scrollToSection("#contact")} size="sm">
-                Get In Touch
+                {t("button.get_in_touch")}
               </Button>
             </motion.div>
           </nav>

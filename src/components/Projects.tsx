@@ -2,26 +2,26 @@ import { AnimatePresence, useInView } from "motion/react";
 import React, { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Button } from "./input/Button";
-import { ProjectType } from "../types";
+import { ProjectType } from "../types/types";
 import Project from "./container/Project";
+import { useTranslation } from "react-i18next";
 
 export default function Projects() {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   const projects: ProjectType[] = [
     {
-      title: "50five Mobile App",
-      description:
-        "Mobile app for managing, finding, and filtering 420,000+ EV charging stations across Europe. Includes charge point management features, real-time status updates, and remote control for operators. Focused on intuitive UX, fast search, and scalable infrastructure.",
+      title: t("projects.projects.50five_app.title"),
+      description: t("projects.projects.50five_app.description"),
       imagePath: "50five_thumbnail.png",
       technologies: ["React Native", "GraphQL", "Apollo Client", "Luxon"],
     },
     {
-      title: "Operations Dashboard",
-      description:
-        "Automated system for real-time monitoring and automatic resetting of EV charge stations on error. Includes event logging, filtering, and instant operator feedback.",
+      title: t("projects.projects.operations_dashboard.title"),
+      description: t("projects.projects.operations_dashboard.description"),
       imagePath: "operationsdashboard_thumbnail.png",
       technologies: [
         "Next.js",
@@ -33,17 +33,15 @@ export default function Projects() {
       ],
     },
     {
-      title: "Build at Home",
-      description:
-        "Web app connecting schools worldwide to share and collaborate on projects. Built in an international team, focused on global knowledge exchange.",
+      title: t("projects.projects.build_at_home.title"),
+      description: t("projects.projects.build_at_home.description"),
       imagePath: "buildathome_thumbnail.png",
       technologies: ["Next.js", "Node.js"],
       demo: "https://buildathome.online/",
     },
     {
-      title: "Portfolio",
-      description:
-        "Personal portfolio site showcasing projects and skills. Built from scratch with modern, responsive design and interactive animations.",
+      title: t("projects.projects.portfolio.title"),
+      description: t("projects.projects.portfolio.description"),
       imagePath: "portfolio_thumbnail.png",
       technologies: ["React", "Typescript", "Motion", "Node.js"],
       demo: "https://tychovanrosmalen.com",
@@ -81,10 +79,9 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl mb-4">Featured Projects</h2>
+          <h2 className="text-4xl sm:text-5xl mb-4">{t("projects.title")}</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of recent work demonstrating technical expertise across
-            various domains
+            {t("projects.description")}
           </p>
         </motion.div>
 
@@ -113,7 +110,9 @@ export default function Projects() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Button className="text-center" size="lg">
-            {showAllProjects ? "Show Less" : "View All Projects"}
+            {showAllProjects
+              ? t("button.show_less")
+              : t("button.view_all_projects")}
           </Button>
         </motion.div>
       </div>

@@ -1,1 +1,143 @@
-{"test": "Test123"}
+{
+  "about": {
+    "description": "I'm a passionate software engineer with 2+ years of experience building innovative digital solutions.",
+    "highlights": {
+      "clean_code": {
+        "description": "Writing maintainable, scalable code with modern best practices and design patterns.",
+        "title": "Clean Code"
+      },
+      "collaboration": {
+        "description": "Working effectively with teams to deliver exceptional user experiences.",
+        "title": "Collaboration"
+      },
+      "performance": {
+        "description": "Optimizing applications for speed, efficiency, and seamless interactions.",
+        "title": "Performance"
+      },
+      "problem_solving": {
+        "description": "Turning complex challenges into elegant solutions through creative thinking.",
+        "title": "Problem Solving"
+      }
+    },
+    "journey": {
+      "description1": "Curiosity sparked my early love of technology, which has undoubtedly developed over time. I now like addressing challenging challenges and optimizing them as a software engineer. It's more than simply code on a screen to me; it's transforming concepts into something that was previously only possible in dreams. I don't build for show; I build with a purpose, creating solutions that support human development.",
+      "description2": "I believe in continuous learning and staying up-to-date with emerging technologies. When I'm not coding, you'll find me exploring new frameworks and tools.",
+      "description3": "Right now I focus on full-stack design, using modern tech to make ideas shine. Building apps that do more than just run, they’re smooth to use — and made to be fun.",
+      "title": "My Journey"
+    },
+
+    "title": "About Me"
+  },
+  "availability": {
+    "current": "Current Availability",
+    "contracted": "Open to contracted side projects",
+    "fulltime": "Open to full-time opportunities",
+    "response_time": "Response time: Usually within 24 hours"
+  },
+  "button": {
+    "back_to_top": "Back to top",
+    "code": "Code",
+    "demo": "Demo",
+    "download_cv": "Download CV",
+    "get_in_touch": "Get In Touch",
+    "send_message": "Send message",
+    "sending": "Sending...",
+    "show_less": "Show Less",
+    "view_all_projects": "View All Projects",
+    "view_my_work": "View My Work"
+  },
+  "contact": {
+    "connect": {
+      "description": "I'm always open to discussing new projects, creative ideas or opportunities. Wheter you need a technical partner or want to chat about technology, I'd love to hear from you.",
+      "email": "Email",
+      "location": "Location",
+      "phone": "Phone",
+      "title": "Let's connect"
+    },
+    "description": "Ready to start your next project? Let's discuss how we can work together",
+    "form": {
+      "email": {
+        "invalid": "Invalid email address",
+        "label": "Email",
+        "placeholder": "john.doe@example.com",
+        "required": "An email is required"
+      },
+      "name": {
+        "label": "Name",
+        "min_length": "Name must be at least {{length}} characters",
+        "placeholder": "Your Name",
+        "required": "Your name is required"
+      },
+      "message": {
+        "label": "Message",
+        "min_length": "Message must be at least {{length}} characters",
+        "placeholder": "Tell me about your project...",
+        "required": "A message is required"
+      },
+      "subject": {
+        "label": "Subject",
+        "min_length": "Subject must be at least {{length}} characters",
+        "placeholder": "Project discussion",
+        "required": "A subject is required"
+      },
+      "title": "Send a Message"
+    },
+    "title": "Get In Touch"
+  },
+  "footer": {
+    "contact": "Contact",
+    "copy_right": "All rights reserved.",
+    "description": "Software Engineer passionate about creating exceptional digital experiences through clean code and thoughtful design",
+    "links": "Quick Links"
+  },
+  "navigation": {
+    "about": "About",
+    "contact": "Contact",
+    "projects": "Projects",
+    "skills": "Skills"
+  },
+  "projects": {
+    "description": "A showcase of recent work demonstrating technical expertise across various domains",
+    "projects": {
+      "50five_app": {
+        "description": "Mobile app for managing, finding, and filtering 420,000+ EV charging stations across Europe. Includes charge point management features, real-time status updates, and remote control for operators. Focused on intuitive UX, fast search, and scalable infrastructure.",
+        "title": "50five Mobile App"
+      },
+      "operations_dashboard": {
+        "description": "Automated system for real-time monitoring and automatic resetting of EV charge stations on error. Includes event logging, filtering, and instant operator feedback.",
+        "title": "Operations Dashboard"
+      },
+      "build_at_home": {
+        "description": "Web app connecting schools worldwide to share and collaborate on projects. Built in an international team, focused on global knowledge exchange.",
+        "title": "Build at Home"
+      },
+      "portfolio": {
+        "description": "Personal portfolio site showcasing projects and skills. Built from scratch with modern, responsive design and interactive animations.",
+        "title": "Portfolio"
+      }
+    },
+    "title": "Featured Projects"
+  },
+  "skills": {
+    "categories": {
+      "backend": "Backend",
+      "cloud_devops": "Cloud & DevOps",
+      "databases": "Databases",
+      "frontend": "Frontend",
+      "mobile": "Mobile"
+    },
+    "description": "A comprehensive toolkit of modern technologies to build exceptional digital experiences.",
+    "title": "Skills & Technologies"
+  },
+  "stats": {
+    "experience": "Years Experience",
+    "projects": "Projects Completed",
+    "satisfaction": "Client Satisfaction",
+    "technologies": "Technologies"
+  },
+  "welcome": {
+    "description": "I build exceptional digital experiences through clean code and thoughtful design. Passionate about creating scalable applications that solve real-world problems.",
+    "hi": "Hi, I'm",
+    "software_engineer": "Software Engineer"
+  }
+}

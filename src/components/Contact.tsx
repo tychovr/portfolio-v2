@@ -10,9 +10,11 @@ import { Input } from "./input/TextField";
 import { TextArea } from "./input/TextArea";
 import { Button } from "./input/Button";
 import { ContactFormData } from "../database/email";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const ref = useRef(null);
+  const { t } = useTranslation();
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const {
@@ -103,10 +105,9 @@ export default function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl mb-4">Get In Touch</h2>
+          <h2 className="text-4xl sm:text-5xl mb-4">{t("contact.title")}</h2>
           <p className="text-4xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to start your next project? Let's discuess how we can work
-            together
+            {t("contact.description")}
           </p>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -117,28 +118,32 @@ export default function Contact() {
           >
             <Card className="border-border">
               <CardHeader>
-                <CardTitle>Send a Message</CardTitle>
+                <CardTitle>{t("button.send_message")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
+                      <Label htmlFor="name">
+                        {t("contact.form.name.label")}
+                      </Label>
                       <Controller
                         name="name"
                         control={control}
                         rules={{
-                          required: "Name is required",
+                          required: t("contact.form.name.required"),
                           minLength: {
                             value: 2,
-                            message: "Name must be at least 2 characters",
+                            message: t("contact.form.name.min_length", {
+                              length: 2,
+                            }),
                           },
                         }}
                         render={({ field }) => (
                           <Input
                             {...field}
                             id="name"
-                            placeholder="Your name"
+                            placeholder={t("contact.form.name.placeholder")}
                             className={errors.name ? "border-destructive" : ""}
                           />
                         )}
@@ -151,15 +156,17 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">
+                        {t("contact.form.email.label")}
+                      </Label>
                       <Controller
                         name="email"
                         control={control}
                         rules={{
-                          required: "Email is required",
+                          required: t("contact.form.email.required"),
                           pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                            message: "Invalid email address",
+                            message: t("contact.form.email.invalid"),
                           },
                         }}
                         render={({ field }) => (
@@ -167,7 +174,7 @@ export default function Contact() {
                             {...field}
                             id="email"
                             type="email"
-                            placeholder="john.doe@example.com"
+                            placeholder={t("contact.form.email.placeholder")}
                             className={errors.email ? "border-destructive" : ""}
                           />
                         )}
@@ -181,22 +188,26 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
+                    <Label htmlFor="subject">
+                      {t("contact.form.subject.label")}
+                    </Label>
                     <Controller
                       name="subject"
                       control={control}
                       rules={{
-                        required: "Subject is required",
+                        required: t("contact.form.subject.required"),
                         minLength: {
                           value: 3,
-                          message: "Subject must be at least 3 characters",
+                          message: t("contact.form.subject.min_length", {
+                            length: 3,
+                          }),
                         },
                       }}
                       render={({ field }) => (
                         <Input
                           {...field}
                           id="subject"
-                          placeholder="Project discussion"
+                          placeholder={t("contact.form.subject.placeholder")}
                           className={errors.subject ? "border-destructive" : ""}
                         />
                       )}
@@ -209,22 +220,26 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">
+                      {t("contact.form.message.label")}
+                    </Label>
                     <Controller
                       name="message"
                       control={control}
                       rules={{
-                        required: "Message is required",
+                        required: t("contact.form.message.required"),
                         minLength: {
                           value: 10,
-                          message: "Message must be at least 10 characters",
+                          message: t("contact.form.message.min_length", {
+                            length: 10,
+                          }),
                         },
                       }}
                       render={({ field }) => (
                         <TextArea
                           {...field}
                           id="message"
-                          placeholder="Tell me about your project..."
+                          placeholder={t("contact.form.message.placeholder")}
                           rows={6}
                           className={errors.message ? "border-destructive" : ""}
                         />
@@ -244,7 +259,9 @@ export default function Contact() {
                   >
                     <span className="flex items-center">
                       <Send className="mr-2 h-4 w-4" />
-                      {isSubmitting ? "Sending..." : "Send message"}
+                      {isSubmitting
+                        ? t("button.sending")
+                        : t("button.send_message")}
                     </span>
                   </Button>
                 </form>
@@ -258,11 +275,9 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div>
-              <h3 className="text-2xl mb-6">Let's Connect</h3>
+              <h3 className="text-2xl mb-6">{t("contact.connect.title")}</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                I'm always open to discussing new projects, creative ideas or
-                opportunities. Wheter you need a technical partner or want to
-                chat about technology, I'd love to hear from you.
+                {t("contact.connect.description")}
               </p>
             </div>
 
@@ -295,11 +310,11 @@ export default function Contact() {
             </div>
 
             <div className="pt-8">
-              <h4 className="mb-4">Current Availability</h4>
+              <h4 className="mb-4">{t("availability.current")}</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p>🟢 Open to contracted side projects</p>
-                <p>🟢 Open to full-time opportunities</p>
-                <p>⚡ Response time: Usually within 24 hours</p>
+                <p>🟢 {t("availability.contracted")}</p>
+                <p>🟢 {t("availability.fulltime")}</p>
+                <p>⚡ {t("availability.response_time")}</p>
               </div>
             </div>
           </motion.div>

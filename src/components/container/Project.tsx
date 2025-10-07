@@ -2,9 +2,10 @@ import React from "react";
 import { Button } from "../input/Button";
 import { Card, CardContent } from "./Card";
 import { Badge } from "./Badge";
-import { ProjectType } from "../../types";
+import { ProjectType } from "../../types/types";
 import { motion } from "motion/react";
 import { ExternalLink, Github } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface ProjectProps {
   project: ProjectType;
@@ -12,7 +13,8 @@ interface ProjectProps {
 }
 
 const Project = ({ project, index }: ProjectProps) => {
-  console.log(project);
+  const { t } = useTranslation();
+
   return (
     <motion.div
       key={project.title}
@@ -75,7 +77,7 @@ const Project = ({ project, index }: ProjectProps) => {
                 >
                   <span className="flex items-center justify-center gap-2">
                     <Github className="h-4 w-4" />
-                    <span>Code</span>
+                    <span>{t("button.code")}</span>
                   </span>
                 </Button>
               )}
@@ -89,7 +91,7 @@ const Project = ({ project, index }: ProjectProps) => {
                 >
                   <span className="flex items-center justify-center gap-2">
                     <ExternalLink className="h-4 w-4" />
-                    <span>Demo</span>
+                    <span>{t("button.demo")}</span>
                   </span>
                 </Button>
               )}

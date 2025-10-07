@@ -4,34 +4,36 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Card, CardContent, CardHeader, CardTitle } from "./container/Card";
 import { Badge } from "./container/Badge";
+import { useTranslation } from "react-i18next";
 
 export default function Skills() {
   const ref = useRef(null);
+  const { t } = useTranslation();
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skillCategories = [
     {
-      title: "Frontend",
+      title: t("skills.categories.frontend"),
       icon: Monitor,
       skills: ["React", "Typescript", "Next.js", "Tailwind CSS", "Javascript"],
     },
     {
-      title: "Backend",
+      title: t("skills.categories.backend"),
       icon: Server,
       skills: ["Node.js", "Express.js", "GraphQL", "C#", "C++", "REST APIs"],
     },
     {
-      title: "Mobile",
+      title: t("skills.categories.mobile"),
       icon: Smartphone,
       skills: ["React Native", "IOS Development", "Android Development"],
     },
     {
-      title: "Cloud & DevOps",
+      title: t("skills.categories.cloud_devops"),
       icon: Cloud,
       skills: ["Docker", "CI/CD", "Linux"],
     },
     {
-      title: "Databases",
+      title: t("skills.categories.databases"),
       icon: Database,
       skills: [
         "PostgreSQL",
@@ -46,10 +48,10 @@ export default function Skills() {
   ];
 
   const stat = [
-    { label: "Years Experience", value: "2+" },
-    { label: "Projects Completed", value: "10+" },
-    { label: "Technologies", value: "20+" },
-    { label: "Client Satisfaction", value: "100%" },
+    { label: t("stats.experience"), value: "2+" },
+    { label: t("stats.projects"), value: "10+" },
+    { label: t("stats.technologies"), value: "20+" },
+    { label: t("stats.satisfaction"), value: "100%" },
   ];
 
   return (
@@ -61,10 +63,9 @@ export default function Skills() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl mb-4">Skills & Technologies</h2>
+          <h2 className="text-4xl sm:text-5xl mb-4">{t("skills.title")}</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit of modern technologies to build exceptional
-            digital experiences.
+            {t("skills.description")}
           </p>
         </motion.div>
 
