@@ -11,6 +11,7 @@ import ScrollToTop from "./components/input/ScrollToTop";
 import Welcome from "./components/Welcome";
 import { useTranslation } from "react-i18next";
 import i18n from "./translations/i18n";
+import { Helmet } from "react-helmet";
 
 function App() {
   const { t } = useTranslation();
@@ -53,20 +54,38 @@ function App() {
     };
   }, [t]);
 
+  const metaTitle = "Tycho van Rosmalen - Software Engineer Portfolio";
+  const metaDescription = t("welcome.description");
+  const metaUrl = "https://tychovanrosmalen.nl";
+  const metaImage = "/images/me.jpg";
+
   return (
-    <div className="min-h-screen bg-background" key={i18n.language}>
-      <Header />
-      <main>
-        <Welcome />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-      <ScrollToTop />
-      <Toast />
-    </div>
+    <>
+      <Helmet>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={metaUrl} />
+        <meta property="og:image" content={metaImage} />
+        <meta name="author" content="Tycho van Rosmalen" />
+        <link rel="canonical" href={metaUrl} />
+      </Helmet>
+      <div className="min-h-screen bg-background" key={i18n.language}>
+        <Header />
+        <main>
+          <Welcome />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+        <ScrollToTop />
+        <Toast />
+      </div>
+    </>
   );
 }
 
