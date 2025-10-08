@@ -93,8 +93,10 @@ export default function Welcome() {
                 onClick={scrollToProjects}
                 className="px-8 py-5 items-center"
               >
-                <span>{t("button.view_my_work")}</span>
-                <ArrowDown className="h-5 w-5 mx-auto" />
+                <span className="flex items-center">
+                  <ArrowDown className="mr-2 h-4 w-4" />
+                  {t("button.view_my_work")}
+                </span>
               </Button>
 
               <a
