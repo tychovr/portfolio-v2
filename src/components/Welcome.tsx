@@ -125,7 +125,11 @@ export default function Welcome() {
               transition={{ delay: 1.4, duration: 1 }}
             >
               {[
-                { icon: Github, href: "https://google.com", label: "GitHub" },
+                {
+                  icon: Github,
+                  href: "https://github.com/tychovr",
+                  label: "GitHub",
+                },
                 {
                   icon: Linkedin,
                   href: "https://www.linkedin.com/in/tycho-van-rosmalen/",
