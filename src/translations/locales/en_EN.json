@@ -44,7 +44,7 @@
     "code": "Code",
     "demo": "Demo",
     "download_cv": "Download CV",
-    "get_in_touch": "Get In Touch",
+    "get_in_touch": "Let's Connect",
     "send_message": "Send message",
     "sending": "Sending...",
     "show_less": "Show Less",
@@ -53,13 +53,13 @@
   },
   "contact": {
     "connect": {
-      "description": "I'm always open to discussing new projects, creative ideas or opportunities. Wheter you need a technical partner or want to chat about technology, I'd love to hear from you.",
+      "description": "I am open to new projects, collaborations, and opportunities. Whether it concerns a technical challenge or a creative idea, I would be glad to discuss it with you.",
       "email": "Email",
       "location": "Location",
       "phone": "Phone",
       "title": "Let's connect"
     },
-    "description": "Ready to start your next project? Let's discuss how we can work together",
+    "description": "Interested in working together, or just want to chat? Drop me a message anytime.",
     "form": {
       "email": {
         "invalid": "Invalid email address",
@@ -76,13 +76,13 @@
       "message": {
         "label": "Message",
         "min_length": "Message must be at least {{length}} characters",
-        "placeholder": "Tell me about your project...",
+        "placeholder": "Share the details — project, idea, or anything else",
         "required": "A message is required"
       },
       "subject": {
         "label": "Subject",
         "min_length": "Subject must be at least {{length}} characters",
-        "placeholder": "Project discussion",
+        "placeholder": "Topic of your message",
         "required": "A subject is required"
       },
       "title": "Send a Message",
@@ -102,7 +102,7 @@
         }
       }
     },
-    "title": "Get In Touch"
+    "title": "Say Hello"
   },
   "footer": {
     "contact": "Contact",

@@ -53,13 +53,13 @@
   },
   "contact": {
     "connect": {
-      "description": "Ik sta altijd open voor het bespreken van nieuwe projecten, creatieve ideeën of kansen. Of je nu een technische partner zoekt of wilt praten over technologie, ik hoor graag van je.",
+      "description": "Ik sta open voor nieuwe projecten, samenwerkingen en kansen. Of het nu gaat om een technisch vraagstuk of een creatief idee, ik ga graag met u in gesprek.",
       "email": "E-mail",
       "location": "Locatie",
       "phone": "Telefoon",
       "title": "Laten we verbinden"
     },
-    "description": "Klaar om aan je volgende project te beginnen? Laten we bespreken hoe we kunnen samenwerken.",
+    "description": "Geïnteresseerd om samen te werken, of gewoon even praten? Stuur me gerust op elk moment een bericht.",
     "form": {
       "email": {
         "invalid": "Ongeldig e-mailadres",
@@ -76,13 +76,13 @@
       "message": {
         "label": "Bericht",
         "min_length": "Bericht moet minimaal {{length}} tekens bevatten",
-        "placeholder": "Vertel me over je project...",
+        "placeholder": "Deel de details — project, idee of iets anders",
         "required": "Een bericht is verplicht"
       },
       "subject": {
         "label": "Onderwerp",
         "min_length": "Onderwerp moet minimaal {{length}} tekens bevatten",
-        "placeholder": "Projectbespreking",
+        "placeholder": "Onderwerp van je bericht",
         "required": "Een onderwerp is verplicht"
       },
       "title": "Stuur een bericht",
