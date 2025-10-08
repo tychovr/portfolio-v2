@@ -11,7 +11,7 @@ export default function Footer() {
   const currentYear = DateTime.now().year;
 
   const socialLinks = [
-    { icon: Github, href: "https://google.com", label: "GitHub" },
+    { icon: Github, href: "https://github.com/tychovr", label: "GitHub" },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/tycho-van-rosmalen/",
