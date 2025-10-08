@@ -34,10 +34,10 @@ export default function About() {
   ];
 
   const stats = [
-    { label: t("stats.experience"), value: "2+" },
-    { label: t("stats.projects"), value: "10+" },
-    { label: t("stats.technologies"), value: "20+" },
-    { label: t("stats.satisfaction"), value: "100%" },
+    { label: t("about.stats.experience"), value: "2+" },
+    { label: t("about.stats.projects"), value: "10+" },
+    { label: t("about.stats.technologies"), value: "20+" },
+    { label: t("about.stats.satisfaction"), value: "100%" },
   ];
 
   return (

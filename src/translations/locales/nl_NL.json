@@ -25,7 +25,12 @@
       "description3": "Op dit moment richt ik me op full-stack design, waarbij ik moderne technologie gebruik om ideeën te laten schitteren. Ik bouw apps die meer doen dan alleen werken; ze zijn soepel in gebruik — en gemaakt om leuk te zijn.",
       "title": "Mijn Reis"
     },
-
+    "stats": {
+      "experience": "Jaren Ervaring",
+      "projects": "Projecten Voltooid",
+      "satisfaction": "Klanttevredenheid",
+      "technologies": "Technologieën"
+    },
     "title": "Over Mij"
   },
   "availability": {
@@ -140,17 +145,27 @@
       "cloud_devops": "Cloud & DevOps",
       "databases": "Databases",
       "frontend": "Frontend",
-      "mobile": "Mobiel"
+      "mobile": "Mobiel",
+      "tools": "Tools & Ontwerp"
     },
-    "description": "Een uitgebreide toolkit van moderne technologieën om uitzonderlijke digitale ervaringen te bouwen.",
+    "description": "Dit zijn de technologieën waarmee ik werk.",
+    "expertises": {
+      "full_stack": {
+        "description": "End-to-end applicatieontwikkeling van concept tot oplevering",
+        "title": "Full Stack Ontwikkeling"
+      },
+      "ui": {
+        "description": "Het creëren van intuïtieve en mooie gebruikersinterfaces",
+        "title": "UI/UX Ontwerp"
+      },
+      "performance": {
+        "description": "Het bouwen van snelle, efficiënte en schaalbare applicaties",
+        "title": "Prestatieoptimalisatie"
+      }
+    },
     "title": "Vaardigheden & Technologieën"
   },
-  "stats": {
-    "experience": "Jaren Ervaring",
-    "projects": "Projecten Voltooid",
-    "satisfaction": "Klanttevredenheid",
-    "technologies": "Technologieën"
-  },
+
   "welcome": {
     "description": "Ik bouw uitzonderlijke digitale ervaringen door schone code en doordacht ontwerp. Gepassioneerd over het creëren van schaalbare applicaties die echte problemen oplossen.",
     "hi": "Hoi, ik ben",

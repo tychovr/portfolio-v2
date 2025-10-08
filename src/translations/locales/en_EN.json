@@ -25,7 +25,12 @@
       "description3": "Right now I focus on full-stack design, using modern tech to make ideas shine. Building apps that do more than just run, they’re smooth to use — and made to be fun.",
       "title": "My Journey"
     },
-
+    "stats": {
+      "experience": "Years Experience",
+      "projects": "Projects Completed",
+      "satisfaction": "Client Satisfaction",
+      "technologies": "Technologies"
+    },
     "title": "About Me"
   },
   "availability": {
@@ -140,16 +145,25 @@
       "cloud_devops": "Cloud & DevOps",
       "databases": "Databases",
       "frontend": "Frontend",
-      "mobile": "Mobile"
+      "mobile": "Mobile",
+      "tools": "Tools & Design"
     },
-    "description": "A comprehensive toolkit of modern technologies to build exceptional digital experiences.",
+    "description": "Here are the technologies I work with.",
+    "expertises": {
+      "full_stack": {
+        "description": "End-to-end application development from concept to deployment",
+        "title": "Full Stack Development"
+      },
+      "ui": {
+        "description": "Creating intuitive and beautiful user interfaces",
+        "title": "UI/UX Design"
+      },
+      "performance": {
+        "description": "Building fast, efficient, and scalable applications",
+        "title": "Performance Optimization"
+      }
+    },
     "title": "Skills & Technologies"
-  },
-  "stats": {
-    "experience": "Years Experience",
-    "projects": "Projects Completed",
-    "satisfaction": "Client Satisfaction",
-    "technologies": "Technologies"
   },
   "welcome": {
     "description": "I build exceptional digital experiences through clean code and thoughtful design. Passionate about creating scalable applications that solve real-world problems.",
