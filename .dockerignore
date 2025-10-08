@@ -1,0 +1,12 @@
+node_modules
+.yarn/*
+.yarnrc.yml#
+.yarn/install-state.gz
+.yarn/build-state.yml
+npm-debug.log*
+yarn-error.log*
+.git
+.gitignore
+Dockerfile
+Dockerfile.*
+.DS_Store
