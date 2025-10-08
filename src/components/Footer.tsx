@@ -11,7 +11,13 @@ export default function Footer() {
   const currentYear = DateTime.now().year;
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/tychovr", label: "GitHub" },
+    {
+      icon: Github,
+      href: "https://github.com/tychovr",
+      label: "GitHub",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/tycho-van-rosmalen/",
@@ -69,6 +75,8 @@ export default function Footer() {
                   <motion.a
                     key={index}
                     href={social.href}
+                    target={social.target}
+                    rel={social.rel}
                     aria-label={social.label}
                     className="p-2 border border-border rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-colors"
                     whileHover={{ y: -2 }}
