@@ -44,7 +44,7 @@ export default function Projects() {
       description: t("projects.projects.portfolio.description"),
       imagePath: "portfolio_thumbnail.png",
       technologies: ["React", "Typescript", "Motion", "Node.js"],
-      demo: "https://tychovanrosmalen.com",
+      demo: "https://tychovanrosmalen.nl",
       github: "https://github.com/tychovr/portfolio-v2",
     },
   ];
