@@ -4,8 +4,8 @@ import { Button } from "./Button";
 import { motion } from "motion/react";
 
 const languages = [
-  { code: "en", label: "EN" },
   { code: "nl", label: "NL" },
+  { code: "en", label: "EN" },
 ];
 
 export function LanguageSwitcher() {
