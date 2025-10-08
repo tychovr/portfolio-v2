@@ -119,16 +119,6 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground">
             © {currentYear} Tycho van Rosmalen. {t("footer.copy_right")}
           </p>
-
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={scrollToTop}
-            className="flex items-center gap-2 h-10"
-          >
-            <ArrowUp className="h-5 w-4 mx-auto" />
-            <span className="text-sm">{t("button.back_to_top")}</span>
-          </Button>
         </motion.div>
       </div>
     </footer>
