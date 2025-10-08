@@ -142,22 +142,19 @@ export default function Welcome() {
                   href: "mailto:tychovanrosmalen12@gmail.com?subject=Contact%20from%20Portfolio",
                   label: "Email",
                 },
-              ].map((social) => {
-                const Icon = social.icon;
-                return (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    target={"_blank"}
-                    rel={"noopener noreferrer"}
-                    className="p-3 border border-border rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-colors"
-                    whileHover={{ y: -2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  >
-                    <Icon className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
-                  </motion.a>
-                );
-              })}
+              ].map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target={"_blank"}
+                  rel={"noopener noreferrer"}
+                  className="p-3 border border-border rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-colors"
+                  whileHover={{ y: -2 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <social.icon className="h-5 w-5 text-muted-foreground" />
+                </motion.a>
+              ))}
             </motion.div>
           </motion.div>
 
