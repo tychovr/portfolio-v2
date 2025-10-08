@@ -168,13 +168,17 @@ export default function Welcome() {
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-border bg-card">
+              <motion.div
+                whileHover={{ y: -4 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-border bg-card"
+              >
                 <img
                   src="/images/me.jpg"
                   alt="Tycho van Rosmalen - Software Engineer"
                   className="w-full h-full object-cover object-[30%_center]"
                 />
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

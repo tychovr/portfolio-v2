@@ -103,20 +103,23 @@ export default function Skills() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {expertiseAreas.map((expertise, index) => (
-            <Card
+            <motion.div
               key={index}
-              className="p-6 text-center hover:shadow-lg transition-shadow"
+              whileHover={{ y: -4 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <CardContent className="p-0">
-                <expertise.icon
-                  className={`h-12 w-12 mx-auto mb-4 ${expertise.color}`}
-                />
-                <h3 className="text-lg mb-2">{expertise.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {expertise.description}
-                </p>
-              </CardContent>
-            </Card>
+              <Card className="p-6 text-center hover:shadow-lg transition-shadow hover:border-primary/50 transition-colors">
+                <CardContent className="p-0">
+                  <expertise.icon
+                    className={`h-12 w-12 mx-auto mb-4 ${expertise.color}`}
+                  />
+                  <h3 className="text-lg mb-2">{expertise.title}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {expertise.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -133,7 +136,7 @@ export default function Skills() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 group hover:border-primary/50 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <div

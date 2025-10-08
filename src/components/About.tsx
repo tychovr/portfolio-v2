@@ -76,14 +76,15 @@ export default function About() {
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="p-4 bg-card border border-border rounded-lg text-center"
+                  className="p-4 bg-card border border-border rounded-lg text-center hover:border-primary/50 transition-colors"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={
                     isInView
                       ? { opacity: 1, scale: 1 }
                       : { opacity: 0, scale: 0.9 }
                   }
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  whileHover={{ y: -4 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 >
                   <div className="text-2xl text-primary mb-1">{stat.value}</div>
                   <div className="text-sm text-muted-foreground">
