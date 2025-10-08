@@ -65,7 +65,6 @@ export default function Projects() {
       scrollToProjects();
       setShowAllProjects(false);
     } else {
-      window.scrollBy({ top: 500, behavior: "smooth" });
       setShowAllProjects(true);
     }
   };
