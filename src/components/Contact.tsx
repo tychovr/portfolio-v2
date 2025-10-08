@@ -36,7 +36,7 @@ export default function Contact() {
     try {
       console.info("Sending email with data:", data);
 
-      const response = await fetch(`http://localhost:8787/send-contact`, {
+      const response = await fetch(`/api/send-contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
