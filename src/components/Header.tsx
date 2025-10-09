@@ -5,6 +5,7 @@ import { Button } from "./input/Button";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./input/LanguageSwitcher";
+import { track } from "../utils/analytics";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +33,8 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (href: string, closeMenu: boolean = false) => {
+    track("navigation_click", { section: href.split("#")[1] });
+
     if (closeMenu) {
       setIsMenuOpen(false);
 
@@ -80,7 +83,10 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <motion.div
             className="cursor-pointer"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => {
+              track("cta_click", { action: "Scroll to Top", url: "" });
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

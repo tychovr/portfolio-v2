@@ -6,6 +6,7 @@ import { ProjectType } from "../../types/types";
 import { motion } from "motion/react";
 import { ExternalLink, Github } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { track } from "../../utils/analytics";
 
 interface ProjectProps {
   project: ProjectType;
@@ -71,9 +72,17 @@ const Project = ({ project, index }: ProjectProps) => {
                   variant="outline"
                   size="sm"
                   className="flex-1"
-                  onClick={() =>
-                    window.open(project.github, "_blank", "noopener,noreferrer")
-                  }
+                  onClick={() => {
+                    track("cta_click", {
+                      action: "Open project repository",
+                      url: project.github || "Not found",
+                    });
+                    window.open(
+                      project.github,
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
+                  }}
                 >
                   <span className="flex items-center justify-center gap-2">
                     <Github className="h-4 w-4" />
@@ -85,9 +94,13 @@ const Project = ({ project, index }: ProjectProps) => {
                 <Button
                   size="sm"
                   className="flex-1"
-                  onClick={() =>
-                    window.open(project.demo, "_blank", "noopener,noreferrer")
-                  }
+                  onClick={() => {
+                    track("cta_click", {
+                      action: "Open project demo",
+                      url: project.demo || "Not found",
+                    });
+                    window.open(project.demo, "_blank", "noopener,noreferrer");
+                  }}
                 >
                   <span className="flex items-center justify-center gap-2">
                     <ExternalLink className="h-4 w-4" />

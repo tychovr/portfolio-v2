@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./Button";
 import { motion } from "motion/react";
+import { track } from "../../utils/analytics";
 
 const languages = [
   { code: "nl", label: "NL" },
@@ -12,6 +13,7 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   const handleChange = (lng: string) => {
+    track("change_language", { language: lng });
     i18n.changeLanguage(lng);
   };
 

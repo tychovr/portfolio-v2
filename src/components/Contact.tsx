@@ -11,6 +11,7 @@ import { TextArea } from "./input/TextArea";
 import { Button } from "./input/Button";
 import { useTranslation } from "react-i18next";
 import { ContactFormData } from "../types/types";
+import { track } from "../utils/analytics";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -46,6 +47,7 @@ export default function Contact() {
 
       if (!response.ok) {
         if (response.status === 429) {
+          track("send_message", { status: "Failed", reason: "Rate limited" });
           toast.error(t("contact.form.toast.rate_limit.title"), {
             description: t("contact.form.toast.rate_limit.description", {
               duration: 15,
@@ -59,6 +61,7 @@ export default function Contact() {
         );
       }
 
+      track("send_message", { status: "Successful" });
       toast.success(t("contact.form.toast.message_sent.title"), {
         description: t("contact.form.toast.message_sent.description"),
         duration: 5000,
@@ -67,6 +70,7 @@ export default function Contact() {
       reset();
     } catch (err) {
       if (errors instanceof Error) {
+        track("send_message", { status: "Failed", reason: errors.message });
         toast.error(t("contact.form.toast.failed.title"), {
           description: errors.message,
           duration: 6000,

@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { Button } from "./input/Button";
 import { useTranslation } from "react-i18next";
 import i18n from "../translations/i18n";
+import { track } from "../utils/analytics";
 export default function Welcome() {
   const [displayText, setDisplayText] = useState("");
   const { t } = useTranslation();
@@ -26,6 +27,8 @@ export default function Welcome() {
   }, []);
 
   const scrollToProjects = () => {
+    track("cta_click", { action: "Scroll to Projects", url: "projects" });
+
     const aboutSection = document.querySelector("#projects");
 
     if (aboutSection) {
@@ -109,6 +112,9 @@ export default function Welcome() {
                 <Button
                   variant="outline"
                   className="px-8 py-5 flex items-center"
+                  onClick={() =>
+                    track("download_cv", { language: i18n.language })
+                  }
                 >
                   <span className="flex items-center">
                     <Download className="mr-2 h-4 w-4" />
@@ -145,6 +151,12 @@ export default function Welcome() {
               ].map((social) => (
                 <motion.a
                   key={social.label}
+                  onClick={() =>
+                    track("social_click", {
+                      social: social.label,
+                      url: social.href,
+                    })
+                  }
                   href={social.href}
                   target={"_blank"}
                   rel={"noopener noreferrer"}

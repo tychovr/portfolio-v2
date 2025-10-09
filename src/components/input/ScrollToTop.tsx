@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import React, { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { ArrowUp } from "lucide-react";
+import { track } from "../../utils/analytics";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,6 +21,7 @@ export default function ScrollToTop() {
   });
 
   const scrollToTop = () => {
+    track("cta_click", { action: "Scroll to Top", url: "" });
     window.scrollTo({
       top: 0,
       behavior: "smooth",

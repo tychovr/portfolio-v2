@@ -4,6 +4,7 @@ import { DateTime } from "luxon";
 import { motion } from "motion/react";
 import { Button } from "./input/Button";
 import { useTranslation } from "react-i18next";
+import { track } from "../utils/analytics";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -44,6 +45,8 @@ export default function Footer() {
   };
 
   const scrollToSection = (href: string) => {
+    track("navigation_click", { section: href.split("#")[1] });
+
     const element = document.querySelector(href);
 
     if (element) {
@@ -74,6 +77,12 @@ export default function Footer() {
                 return (
                   <motion.a
                     key={index}
+                    onClick={() =>
+                      track("social_click", {
+                        social: social.label,
+                        url: social.href,
+                      })
+                    }
                     href={social.href}
                     target={social.target}
                     rel={social.rel}
