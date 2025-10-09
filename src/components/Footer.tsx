@@ -1,8 +1,7 @@
 import React from "react";
-import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { DateTime } from "luxon";
 import { motion } from "motion/react";
-import { Button } from "./input/Button";
 import { useTranslation } from "react-i18next";
 import { track } from "../utils/analytics";
 
@@ -39,10 +38,6 @@ export default function Footer() {
     { label: t("navigation.projects"), href: "#projects" },
     { label: t("navigation.contact"), href: "#contact" },
   ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   const scrollToSection = (href: string) => {
     track("navigation_click", { section: href.split("#")[1] });
