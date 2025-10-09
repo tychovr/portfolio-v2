@@ -292,31 +292,33 @@ export default function Contact() {
             </div>
 
             <div className="space-y-6">
-              {contactInfo.map((info, index) => {
-                const Icon = info.icon;
-
-                return (
-                  <motion.a
-                    key={index}
-                    href={info.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
-                    whileHover={{ x: 4 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  >
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">
-                        {info.title}
-                      </p>
-                      <p className="text-foreground">{info.value}</p>
-                    </div>
-                  </motion.a>
-                );
-              })}
+              {contactInfo.map((info, index) => (
+                <motion.a
+                  key={index}
+                  onClick={() =>
+                    track("social_click", {
+                      social: info.title,
+                      url: info.href,
+                    })
+                  }
+                  href={info.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+                  whileHover={{ x: 4 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                >
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <info.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">
+                      {info.title}
+                    </p>
+                    <p className="text-foreground">{info.value}</p>
+                  </div>
+                </motion.a>
+              ))}
             </div>
 
             <div className="pt-8">
