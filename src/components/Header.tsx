@@ -84,7 +84,7 @@ export default function Header() {
           <motion.div
             className="cursor-pointer"
             onClick={() => {
-              track("cta_click", { action: "Scroll to Top", url: "" });
+              track("cta_click", { action: "Scroll to Top", url: undefined });
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             whileHover={{ scale: 1.05 }}

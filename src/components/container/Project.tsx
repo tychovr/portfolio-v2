@@ -75,7 +75,7 @@ const Project = ({ project, index }: ProjectProps) => {
                   onClick={() => {
                     track("cta_click", {
                       action: "Open project repository",
-                      url: project.github || "Not found",
+                      url: project.github,
                     });
                     window.open(
                       project.github,
@@ -97,7 +97,7 @@ const Project = ({ project, index }: ProjectProps) => {
                   onClick={() => {
                     track("cta_click", {
                       action: "Open project demo",
-                      url: project.demo || "Not found",
+                      url: project.demo,
                     });
                     window.open(project.demo, "_blank", "noopener,noreferrer");
                   }}

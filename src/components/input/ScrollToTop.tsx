@@ -21,7 +21,7 @@ export default function ScrollToTop() {
   });
 
   const scrollToTop = () => {
-    track("cta_click", { action: "Scroll to Top", url: "" });
+    track("cta_click", { action: "Scroll to Top", url: undefined });
     window.scrollTo({
       top: 0,
       behavior: "smooth",
