@@ -25,7 +25,15 @@ export default function Skills() {
     {
       title: t("skills.categories.frontend"),
       icon: Monitor,
-      skills: ["React", "Typescript", "Next.js", "Tailwind CSS", "Javascript"],
+      skills: [
+        "React",
+        "Typescript",
+        "Next.js",
+        "Tailwind CSS",
+        "Javascript",
+        "GraphQL (Client)",
+        "Storybook",
+      ],
       color: "from-blue-500 to-cyan-500",
     },
     {
