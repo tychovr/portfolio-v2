@@ -49,7 +49,14 @@ export default function Skills() {
     {
       title: t("skills.categories.databases"),
       icon: Database,
-      skills: ["PostgreSQL", "MongoDB", "Supabase", "MySQL", "Firebase"],
+      skills: [
+        "PostgreSQL",
+        "MongoDB",
+        "Supabase",
+        "MySQL",
+        "Firebase",
+        "Redis",
+      ],
       color: "from-indigo-500 to-blue-500",
     },
     {
