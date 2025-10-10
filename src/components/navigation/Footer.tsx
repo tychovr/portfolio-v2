@@ -9,6 +9,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   const currentYear = DateTime.now().year;
+  const email = process.env.REACT_APP_EMAIL;
 
   const socialLinks = [
     {
@@ -27,7 +28,7 @@ export default function Footer() {
     },
     {
       icon: Mail,
-      href: "mailto:tychovanrosmalen12@gmail.com?subject=Contact%20from%20Portfolio",
+      href: `mailto:${email}?subject=Contact%20from%20Portfolio`,
       label: "Email",
     },
   ];
@@ -111,7 +112,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h4>{t("footer.contact")}</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>tychovanrosmalen12@gmail.com</p>
+              <p>{email}</p>
               <p>Druten, Gelderland</p>
               <div className="flex flex-col text-primary text-sm gap-1">
                 <div className="flex items-center gap-2 text-primary text-sm">

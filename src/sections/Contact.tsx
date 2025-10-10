@@ -23,6 +23,8 @@ export default function Contact() {
   const { t } = useTranslation();
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const email = process.env.REACT_APP_EMAIL;
+
   const {
     control,
     handleSubmit,
@@ -94,8 +96,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      value: "tychovanrosmalen12@gmail.com",
-      href: "mailto:tychovanrosmalen12@gmail.com?subject=Contact%20from%20Portfolio",
+      value: email,
+      href: `mailto:${email}?subject=Contact%20from%20Portfolio`,
     },
     {
       icon: Phone,

@@ -19,6 +19,7 @@ export default function Welcome() {
   const [displayText, setDisplayText] = useState("");
   const { t } = useTranslation();
 
+  const email = process.env.REACT_APP_EMAIL;
   const fullName = "Tycho van Rosmalen";
 
   useEffect(() => {
@@ -159,7 +160,7 @@ export default function Welcome() {
                 },
                 {
                   icon: Mail,
-                  href: "mailto:tychovanrosmalen12@gmail.com?subject=Contact%20from%20Portfolio",
+                  href: `mailto:${email}?subject=Contact%20from%20Portfolio`,
                   label: "Email",
                 },
               ].map((social) => (
