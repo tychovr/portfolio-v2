@@ -1,11 +1,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import {
+  ArrowDown,
+  Github,
+  Linkedin,
+  Mail,
+  Download,
+  Sparkles,
+} from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "../components/input/Button";
 import { useTranslation } from "react-i18next";
 import i18n from "../translations/i18n";
 import { track } from "../utils/analytics";
+import { Badge } from "../components/container/Badge";
 
 export default function Welcome() {
   const [displayText, setDisplayText] = useState("");
@@ -51,8 +59,13 @@ export default function Welcome() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
+              className="flex flex-row gap-4 items-center"
             >
               <span className="text-primary text-lg">{t("welcome.hi")}</span>
+              <Badge className="flex flex-row items-center bg-primary/20 text-primary border-primary/30 hover:bg-primary/30">
+                <Sparkles className="h-3 w-3 mr-1" />
+                {t("welcome.opportunities")}
+              </Badge>
             </motion.div>
 
             <motion.h1

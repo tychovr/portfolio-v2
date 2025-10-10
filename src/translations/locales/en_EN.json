@@ -169,6 +169,7 @@
   "welcome": {
     "description": "Open to full-time positions and freelance projects. I create modern web applications with clean code ans user-friendly design.",
     "hi": "Hi, I'm",
+    "opportunities": "Open to Opportunities",
     "software_engineer": "Full Stack Developer"
   }
 }

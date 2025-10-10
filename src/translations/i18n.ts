@@ -6,13 +6,10 @@ import i18n from "i18next";
 i18n.use(initReactI18next).init({
   lng: "nl",
   fallbackLng: "nl",
-  debug: false,
   resources: {
     en: { translation: en_EN },
     nl: { translation: nl_NL },
   },
-  defaultNS: "translation",
-  interpolation: { escapeValue: false },
 });
 
 export default i18n;
