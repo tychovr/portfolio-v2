@@ -34,9 +34,11 @@
     "title": "Over Mij"
   },
   "availability": {
+    "consulting": "Beschikbaar voor advies",
     "current": "Huidige Beschikbaarheid",
-    "contracted": "Open voor gecontracteerde zijprojecten",
     "fulltime": "Open voor fulltime kansen",
+    "freelance": "Beschikbaar voor freelance projecten",
+    "projects": "Beschikbaar voor projecten",
     "response_time": "Reactietijd: Meestal binnen 24 uur"
   },
   "button": {
@@ -101,7 +103,7 @@
         }
       }
     },
-    "title": "Neem contact op"
+    "title": "Laten We Samenwerken"
   },
   "footer": {
     "contact": "Contact",
@@ -166,8 +168,8 @@
   },
 
   "welcome": {
-    "description": "Ik bouw uitzonderlijke digitale ervaringen door schone code en doordacht ontwerp. Gepassioneerd over het creëren van schaalbare applicaties die echte problemen oplossen.",
+    "description": "Ik maak moderne webapplicaties met overzichtelijke code en een gebruiksvriendelijk ontwerp.",
     "hi": "Hoi, ik ben",
-    "software_engineer": "Software Engineer"
+    "software_engineer": "Fullstack-ontwikkelaar"
   }
 }

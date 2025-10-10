@@ -114,8 +114,15 @@ export default function Footer() {
               <p>tychovanrosmalen12@gmail.com</p>
               <p>Druten, Gelderland</p>
               <div className="flex flex-col text-primary text-sm gap-1">
-                <span>{t("availability.fulltime")}</span>
-                <span>{t("availability.contracted")}</span>
+                <div className="flex items-center gap-2 text-primary text-sm">
+                  {" "}
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>{t("availability.fulltime")}</span>
+                </div>
+                <div className="flex items-center gap-2 text-primary text-sm">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>{t("availability.projects")}</span>
+                </div>
               </div>
             </div>
           </div>

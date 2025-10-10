@@ -325,7 +325,8 @@ export default function Contact() {
               <h4 className="mb-4">{t("availability.current")}</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>🟢 {t("availability.fulltime")}</p>
-                <p>🟢 {t("availability.contracted")}</p>
+                <p>🟢 {t("availability.freelance")}</p>
+                <p>🟢 {t("availability.consulting")}</p>
                 <p>⚡ {t("availability.response_time")}</p>
               </div>
             </div>

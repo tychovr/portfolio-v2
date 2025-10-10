@@ -34,9 +34,11 @@
     "title": "About Me"
   },
   "availability": {
+    "consulting": "Available for consulting",
     "current": "Current Availability",
-    "contracted": "Open to contracted side projects",
     "fulltime": "Open to full-time opportunities",
+    "freelance": "Available for freelance projects",
+    "projects": "Available for projects",
     "response_time": "Response time: Usually within 24 hours"
   },
   "button": {
@@ -58,7 +60,7 @@
       "phone": "Phone",
       "title": "Let's connect"
     },
-    "description": "Interested in working together, or just want to chat? Drop me a message anytime.",
+    "description": "Ready to start your project",
     "form": {
       "email": {
         "invalid": "Invalid email address",
@@ -101,7 +103,7 @@
         }
       }
     },
-    "title": "Say Hello"
+    "title": "Let's Work Together"
   },
   "footer": {
     "contact": "Contact",
@@ -165,8 +167,8 @@
     "title": "Skills & Technologies"
   },
   "welcome": {
-    "description": "I build exceptional digital experiences through clean code and thoughtful design. Passionate about creating scalable applications that solve real-world problems.",
+    "description": "I create modern web applications with clean code ans user-friendly design.",
     "hi": "Hi, I'm",
-    "software_engineer": "Software Engineer"
+    "software_engineer": "Full Stack Developer"
   }
 }
