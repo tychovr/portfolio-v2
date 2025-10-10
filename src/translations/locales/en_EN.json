@@ -2,21 +2,21 @@
   "about": {
     "description": "I'm a passionate software engineer with 2+ years of experience building innovative digital solutions.",
     "highlights": {
+      "adaptable": {
+        "description": "Thriving in both full-time roles and flexible freelance engagements.",
+        "title": "Adaptable"
+      },
       "clean_code": {
         "description": "Writing maintainable, scalable code with modern best practices and design patterns.",
         "title": "Clean Code"
       },
-      "collaboration": {
-        "description": "Working effectively with teams to deliver exceptional user experiences.",
-        "title": "Collaboration"
-      },
-      "performance": {
-        "description": "Optimizing applications for speed, efficiency, and seamless interactions.",
-        "title": "Performance"
-      },
       "problem_solving": {
         "description": "Turning complex challenges into elegant solutions through creative thinking.",
         "title": "Problem Solving"
+      },
+      "team_player": {
+        "description": "Collaborating effectively in teams or working independently on freelance projects.",
+        "title": "Team Player"
       }
     },
     "journey": {
@@ -119,7 +119,7 @@
     "welcome": "Welcome"
   },
   "projects": {
-    "description": "A showcase of recent work demonstrating technical expertise across various domains",
+    "description": "A showcase of proffesional work across various industries",
     "projects": {
       "50five_app": {
         "description": "Mobile app for managing, finding, and filtering 420,000+ EV charging stations across Europe. Includes charge point management features, real-time status updates, and remote control for operators. Focused on intuitive UX, fast search, and scalable infrastructure.",
@@ -149,7 +149,7 @@
       "mobile": "Mobile",
       "tools": "Tools & Design"
     },
-    "description": "Here are the technologies I work with.",
+    "description": "Technical skills and services I bring to full-time roles and freelance projects",
     "expertises": {
       "full_stack": {
         "description": "End-to-end application development from concept to deployment",
@@ -161,13 +161,13 @@
       },
       "performance": {
         "description": "Building fast, efficient, and scalable applications",
-        "title": "Performance Optimization"
+        "title": "Performance & Scalability"
       }
     },
     "title": "Skills & Technologies"
   },
   "welcome": {
-    "description": "I create modern web applications with clean code ans user-friendly design.",
+    "description": "Open to full-time positions and freelance projects. I create modern web applications with clean code ans user-friendly design.",
     "hi": "Hi, I'm",
     "software_engineer": "Full Stack Developer"
   }

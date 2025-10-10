@@ -2,21 +2,21 @@
   "about": {
     "description": "Ik ben een gepassioneerde software engineer met meer dan 2 jaar ervaring in het bouwen van innovatieve digitale oplossingen.",
     "highlights": {
+      "adaptable": {
+        "description": "Ik voel me thuis in zowel fulltime posities als flexibele freelance-opdrachten.",
+        "title": "Aanpasbaar"
+      },
       "clean_code": {
         "description": "Het schrijven van onderhoudbare, schaalbare code met moderne best practices en ontwerpprincipes.",
         "title": "Schone Code"
       },
-      "collaboration": {
-        "description": "Effectief samenwerken met teams om uitzonderlijke gebruikerservaringen te leveren.",
-        "title": "Samenwerking"
-      },
-      "performance": {
-        "description": "Applicaties optimaliseren voor snelheid, efficiëntie en soepele interacties.",
-        "title": "Prestaties"
-      },
       "problem_solving": {
         "description": "Complexe uitdagingen omzetten in elegante oplossingen door creatief denken.",
         "title": "Probleemoplossing"
+      },
+      "team_player": {
+        "description": "Effectief samenwerken in teams of zelfstandig werken aan freelance projecten.",
+        "title": "Teamspeler"
       }
     },
     "journey": {
@@ -149,7 +149,7 @@
       "mobile": "Mobiel",
       "tools": "Tools & Ontwerp"
     },
-    "description": "Dit zijn de technologieën waarmee ik werk.",
+    "description": "Een showcase van professioneel werk in verschillende sectoren",
     "expertises": {
       "full_stack": {
         "description": "End-to-end applicatieontwikkeling van concept tot oplevering",
@@ -161,14 +161,14 @@
       },
       "performance": {
         "description": "Het bouwen van snelle, efficiënte en schaalbare applicaties",
-        "title": "Prestatieoptimalisatie"
+        "title": "Prestaties & Schaalbaarheid"
       }
     },
     "title": "Vaardigheden & Technologieën"
   },
 
   "welcome": {
-    "description": "Ik maak moderne webapplicaties met overzichtelijke code en een gebruiksvriendelijk ontwerp.",
+    "description": "Open voor fulltime posities en freelanceprojecten. Ik maak moderne webapplicaties met overzichtelijke code en een gebruiksvriendelijk ontwerp.",
     "hi": "Hoi, ik ben",
     "software_engineer": "Fullstack-ontwikkelaar"
   }

@@ -23,13 +23,13 @@ export default function About() {
     },
     {
       icon: Users,
-      title: t("about.highlights.collaboration.title"),
-      description: t("about.highlights.collaboration.description"),
+      title: t("about.highlights.team_player.title"),
+      description: t("about.highlights.team_player.description"),
     },
     {
       icon: Zap,
-      title: t("about.highlights.performance.title"),
-      description: t("about.highlights.performance.description"),
+      title: t("about.highlights.adaptable.title"),
+      description: t("about.highlights.adaptable.description"),
     },
   ];
 

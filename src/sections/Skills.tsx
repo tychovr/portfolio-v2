@@ -82,7 +82,7 @@ export default function Skills() {
     },
     {
       icon: Zap,
-      title: t("about.highlights.performance.title"),
+      title: t("skills.expertises.performance.title"),
       description: t("skills.expertises.performance.description"),
       color: "text-yellow-400",
     },
