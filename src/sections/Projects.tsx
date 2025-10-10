@@ -16,8 +16,9 @@ export default function Projects() {
     {
       title: t("projects.projects.50five_app.title"),
       description: t("projects.projects.50five_app.description"),
-      imagePath: "50five_thumbnail.png",
+      imagePath: "image.png",
       technologies: ["React Native", "GraphQL", "Apollo Client", "Luxon"],
+      demo: "https://play.google.com/store/search?q=50five&c=apps&hl=nl",
     },
     {
       title: t("projects.projects.operations_dashboard.title"),
@@ -43,7 +44,7 @@ export default function Projects() {
       title: t("projects.projects.portfolio.title"),
       description: t("projects.projects.portfolio.description"),
       imagePath: "portfolio_thumbnail.png",
-      technologies: ["React", "Typescript", "Motion", "Node.js"],
+      technologies: ["React", "Typescript", "Motion", "Node.js", "Express"],
       demo: "https://tychovanrosmalen.nl",
       github: "https://github.com/tychovr/portfolio-v2",
     },
