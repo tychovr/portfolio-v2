@@ -43,7 +43,7 @@ export default function Skills() {
     {
       title: t("skills.categories.cloud_devops"),
       icon: Cloud,
-      skills: ["Docker", "CI/CD", "Linux"],
+      skills: ["Docker", "CI/CD", "Linux", "Version Control"],
       color: "from-orange-500 to-red-500",
     },
     {
