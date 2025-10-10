@@ -30,7 +30,7 @@ Switch languages using the menu in the header.
 ## 📬 Contact
 
 Interested in collaboration?  
-See the Contact section in the app or email [contact@tychovanrosmalen.nl](mailto:contact@tychovanrosmalen.nl).
+See the Contact section in the app or email [tychovanrosmalen12@gmail.com](mailto:tychovanrosmalen12@gmail.com).
 
 ---
 
