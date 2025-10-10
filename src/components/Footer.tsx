@@ -100,7 +100,7 @@ export default function Footer() {
                 <button
                   key={link.label}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-muted-foregrond hover:text-primary transition-colors text-left"
+                  className="text-muted-foreground hover:text-primary transition-colors text-left"
                 >
                   {link.label}
                 </button>
