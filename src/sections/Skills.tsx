@@ -39,7 +39,15 @@ export default function Skills() {
     {
       title: t("skills.categories.backend"),
       icon: Server,
-      skills: ["Node.js", "Express.js", "GraphQL", "C#", "C++", "REST APIs"],
+      skills: [
+        "Node.js",
+        "Express.js",
+        "GraphQL",
+        "C#",
+        "C++",
+        "REST APIs",
+        "Apollo Server",
+      ],
       color: "from-green-500 to-emerald-500",
     },
     {
