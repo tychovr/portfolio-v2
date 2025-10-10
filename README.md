@@ -23,7 +23,7 @@ Switch languages using the menu in the header.
 ## 📁 Project Structure
 
 - `src/components` — UI components (Header, Footer, Contact, etc)
-- `src/pages` — Main page sections
+- `src/sections` — Main page sections
 - `src/translations` — i18next language files
 - `src/utils` — Analytics, helper functions, etc.
 
