@@ -54,13 +54,13 @@
   },
   "contact": {
     "connect": {
-      "description": "I am open to new projects, collaborations, and opportunities. Whether it’s tackling a technical challenge or exploring a creative idea, I’d be delighted to connect and discuss how we can work together.",
+      "description": "I'm always open to discussing new projects, creative ideas, or opportunities. Whether you need a technical partner or want to chat about technology, I'd love to hear from you.",
       "email": "Email",
       "location": "Location",
       "phone": "Phone",
       "title": "Let's connect"
     },
-    "description": "Ready to start your project",
+    "description": "Interested in working together? Reach out about full-time opportunities or freelance projects",
     "form": {
       "email": {
         "invalid": "Invalid email address",

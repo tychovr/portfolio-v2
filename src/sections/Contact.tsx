@@ -121,7 +121,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl sm:text-5xl mb-4">{t("contact.title")}</h2>
-          <p className="text-4xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {t("contact.description")}
           </p>
         </motion.div>
