@@ -4,14 +4,19 @@ import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion, useInView } from "motion/react";
-import { Card, CardContent, CardHeader, CardTitle } from "./container/Card";
-import { Label } from "./container/Label";
-import { Input } from "./input/TextField";
-import { TextArea } from "./input/TextArea";
-import { Button } from "./input/Button";
+import { Label } from "../components/container/Label";
+import { Input } from "../components/input/TextField";
+import { TextArea } from "../components/input/TextArea";
+import { Button } from "../components/input/Button";
 import { useTranslation } from "react-i18next";
 import { ContactFormData } from "../types/types";
 import { track } from "../utils/analytics";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/container/Card";
 
 export default function Contact() {
   const ref = useRef(null);

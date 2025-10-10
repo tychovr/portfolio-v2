@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import "./styles/globals.css";
-import Header from "./components/Header";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
 import Toast from "./components/container/Toast";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import ScrollToTop from "./components/input/ScrollToTop";
-import Welcome from "./components/Welcome";
 import { useTranslation } from "react-i18next";
 import i18n from "./translations/i18n";
+import Welcome from "./pages/Welcome";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Header from "./components/navigation/Header";
+import Footer from "./components/navigation/Footer";
 
 function App() {
   const { t } = useTranslation();

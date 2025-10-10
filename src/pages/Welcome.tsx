@@ -2,10 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { motion } from "motion/react";
-import { Button } from "./input/Button";
+import { Button } from "../components/input/Button";
 import { useTranslation } from "react-i18next";
 import i18n from "../translations/i18n";
 import { track } from "../utils/analytics";
+
 export default function Welcome() {
   const [displayText, setDisplayText] = useState("");
   const { t } = useTranslation();

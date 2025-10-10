@@ -1,11 +1,11 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Button } from "./input/Button";
+import { Button } from "../input/Button";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { LanguageSwitcher } from "./input/LanguageSwitcher";
-import { track } from "../utils/analytics";
+import { LanguageSwitcher } from "../input/LanguageSwitcher";
+import { track } from "../../utils/analytics";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

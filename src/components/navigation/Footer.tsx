@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { DateTime } from "luxon";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { track } from "../utils/analytics";
+import { track } from "../../utils/analytics";
 
 export default function Footer() {
   const { t } = useTranslation();

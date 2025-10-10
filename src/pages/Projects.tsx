@@ -1,9 +1,9 @@
 import { AnimatePresence, useInView } from "motion/react";
 import React, { useRef, useState } from "react";
 import { motion } from "motion/react";
-import { Button } from "./input/Button";
+import { Button } from "../components/input/Button";
 import { ProjectType } from "../types/types";
-import Project from "./container/Project";
+import Project from "../components/container/Project";
 import { useTranslation } from "react-i18next";
 
 export default function Projects() {

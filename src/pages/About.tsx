@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Code2, Lightbulb, Users, Zap } from "lucide-react";
-import { Card, CardContent } from "./container/Card";
+import { Card, CardContent } from "../components/container/Card";
 import { useTranslation } from "react-i18next";
 
 export default function About() {

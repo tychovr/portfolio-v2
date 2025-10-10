@@ -1,4 +1,9 @@
 import React from "react";
+import { useRef } from "react";
+import { motion, useInView } from "motion/react";
+import { Card, CardContent, CardTitle } from "../components/container/Card";
+import { Badge } from "../components/container/Badge";
+import { useTranslation } from "react-i18next";
 import {
   Cloud,
   Code2,
@@ -10,11 +15,6 @@ import {
   Smartphone,
   Zap,
 } from "lucide-react";
-import { useRef } from "react";
-import { motion, useInView } from "motion/react";
-import { Card, CardContent, CardTitle } from "./container/Card";
-import { Badge } from "./container/Badge";
-import { useTranslation } from "react-i18next";
 
 export default function Skills() {
   const ref = useRef(null);
