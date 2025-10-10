@@ -4,11 +4,11 @@ import Toast from "./components/container/Toast";
 import ScrollToTop from "./components/input/ScrollToTop";
 import { useTranslation } from "react-i18next";
 import i18n from "./translations/i18n";
-import Welcome from "./pages/Welcome";
-import About from "./pages/About";
-import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
+import Welcome from "./sections/Welcome";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 import Header from "./components/navigation/Header";
 import Footer from "./components/navigation/Footer";
 
