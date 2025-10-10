@@ -98,8 +98,8 @@ export default function Welcome() {
                 className="px-8 py-5 items-center"
               >
                 <span className="flex items-center">
-                  <ArrowDown className="mr-2 h-4 w-4" />
                   {t("button.view_my_work")}
+                  <ArrowDown className="ml-2 h-4 w-4" />
                 </span>
               </Button>
 
