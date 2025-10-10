@@ -18,7 +18,6 @@ export default function Projects() {
       description: t("projects.projects.50five_app.description"),
       imagePath: "image.png",
       technologies: ["React Native", "GraphQL", "Apollo Client", "Luxon"],
-      demo: "https://play.google.com/store/search?q=50five&c=apps&hl=nl",
     },
     {
       title: t("projects.projects.operations_dashboard.title"),
