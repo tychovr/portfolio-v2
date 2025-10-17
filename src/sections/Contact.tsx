@@ -102,7 +102,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+31 6 14 35 67 62",
+      value: "+31 6 14356762",
       href: "tel:+31614356762",
     },
     {
