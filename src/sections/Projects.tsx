@@ -16,7 +16,7 @@ export default function Projects() {
     {
       title: t("projects.projects.50five_app.title"),
       description: t("projects.projects.50five_app.description"),
-      imagePath: "image.png",
+      imagePath: "50fiveapp_thumbnail.png",
       technologies: ["React Native", "GraphQL", "Apollo Client", "Luxon"],
     },
     {
