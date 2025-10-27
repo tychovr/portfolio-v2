@@ -102,8 +102,8 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+31 6 14356762",
-      href: "tel:+31614356762",
+      value: "+31 6 34004186",
+      href: "tel:+31634004186",
     },
     {
       icon: MapPin,
